@@ -14,6 +14,8 @@ import {
   Workflow,
   Mail,
   UserCheck,
+  Info,
+  TimerIcon,
 } from "lucide-react";
 import {
   SiN8N,
@@ -224,6 +226,195 @@ export default function LandingPage() {
                     <span className="text-sm">Send Notification</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-20 sm:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Beispiel Workflows
+            </h2>
+          </div>
+
+          <div className="flex justify-between mb-10 ">
+            <div className="flex ">
+              <div className="flex-col bg-slate-900 p-10 rounded-lg">
+                <img
+                  className="h-[300px] w-[600px] rounded-lg mb-10"
+                  src={"LeadAutomationWorkflow.png"}
+                ></img>
+                <Card className="bg-slate-800 border-slate-700">
+                  <CardContent className="">
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Lead Generation
+                        </h3>
+                        <p className="text-sm text-slate-300">
+                          Personalisierte Lead Generation individuell an dein
+                          Unternehmen angepasst
+                        </p>
+                        <div className="flex justify-between max-w-[400px] mt-5">
+                          <p className="text-sm text-slate-300">
+                            Es funktioniert wie folgt, die Unternehmen werden
+                            mit Google Maps rausgesucht, die Emails anschließend
+                            von der Website extrahiert. Der KI Agent nutzt
+                            anschließend die Informationen{" "}
+                            <span className="text-orange-500 font-bold">
+                              {" "}
+                              ihres{" "}
+                            </span>
+                            Unternehmens und die Informationen von der Website
+                            des potentiellen{" "}
+                            <span className="text-orange-500 font-bold">
+                              Kunden
+                            </span>{" "}
+                            um eine personalisierte einzigartige Email zu
+                            verfassen und abzusenden{" "}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            <div className="flex ">
+              <div className="flex-col bg-slate-900 p-10 rounded-lg">
+                <img
+                  className="h-[300px] w-[600px] rounded-lg mb-10"
+                  src={"MitarbeiterWorkflow.png"}
+                ></img>
+                <Card className="bg-slate-800 border-slate-700">
+                  <CardContent className="">
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                        <UserCheck className="h-6 w-6 text-green-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Mitarbeiter Verteilung
+                        </h3>
+                        <p className="text-sm text-slate-300 max-w-[440px]">
+                          Verteile automatische Aufgaben an deine Mitarbeiter,
+                          und steigere die Effizients deines Unternehmens und
+                          spare Zeit
+                        </p>
+                        <div className="flex justify-between max-w-[400px] mt-5">
+                          <p className="text-sm text-slate-300">
+                            Es funktioniert so, sobald ein lead geantwortet hat,
+                            wird der KI Agent uns sagen, ob sie Interesse an dem
+                            Angebot haben, bzw zustimmen, wenn dies der Fall
+                            ist, werden alle wichtige Informationen an ihre
+                            Mitarbeiter gesendet, mit einer personalisierte
+                            Aufforderung, damit alle Bescheid wissen was zu tun
+                            ist
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-between mb-10 ">
+            <div className="flex ">
+              <div className="flex-col bg-slate-900 p-10 rounded-lg">
+                <img
+                  className="h-[300px] w-[600px] rounded-lg mb-10"
+                  src={"AutoResponder.png"}
+                ></img>
+                <Card className="bg-slate-800 border-slate-700">
+                  <CardContent className="">
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
+                        <Workflow className="h-6 w-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Email Autoresponder
+                        </h3>
+                        <p className="text-sm text-slate-300">
+                          Personalisierte Lead Generation individuell an dein
+                          Unternehmen angepasst
+                        </p>
+                        <div className="flex justify-between max-w-[400px] mt-5">
+                          <p className="text-sm text-slate-300">
+                            Es funktioniert wie folgt, die Unternehmen werden
+                            mit Google Maps rausgesucht, die Emails anschließend
+                            von der Website extrahiert. Der KI Agent nutzt
+                            anschließend die Informationen{" "}
+                            <span className="text-orange-500 font-bold">
+                              {" "}
+                              ihres{" "}
+                            </span>
+                            Unternehmens und die Informationen von der Website
+                            des potentiellen{" "}
+                            <span className="text-orange-500 font-bold">
+                              Kunden
+                            </span>{" "}
+                            um eine personalisierte einzigartige Email zu
+                            verfassen und abzusenden{" "}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            <div className="flex ">
+              <div className="flex-col bg-slate-900 p-10 rounded-lg">
+                <img
+                  className="h-[300px] w-[600px] rounded-lg mb-10"
+                  src={"LeadAutomationWorkflow.png"}
+                ></img>
+                <Card className="bg-slate-800 border-slate-700">
+                  <CardContent className="">
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-green-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Mitarbeiter Verteilung
+                        </h3>
+                        <p className="text-sm text-slate-300">
+                          Personalisierte Lead Generation individuell an dein
+                          Unternehmen angepasst
+                        </p>
+                        <div className="flex justify-between max-w-[400px] mt-5">
+                          <p className="text-sm text-slate-300">
+                            Es funktioniert wie folgt, die Unternehmen werden
+                            mit Google Maps rausgesucht, die Emails anschließend
+                            von der Website extrahiert. Der KI Agent nutzt
+                            anschließend die Informationen{" "}
+                            <span className="text-orange-500 font-bold">
+                              {" "}
+                              ihres{" "}
+                            </span>
+                            Unternehmens und die Informationen von der Website
+                            des potentiellen{" "}
+                            <span className="text-orange-500 font-bold">
+                              Kunden
+                            </span>{" "}
+                            um eine personalisierte einzigartige Email zu
+                            verfassen und abzusenden{" "}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
