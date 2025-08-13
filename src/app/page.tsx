@@ -13,6 +13,7 @@ import {
   Mail,
   UserCheck,
   User,
+  ArrowDown,
 } from "lucide-react";
 import {
   SiN8N,
@@ -114,7 +115,6 @@ export default function LandingPage() {
   } as const;
 
   const integrations = Object.keys(iconsMap) as Array<keyof typeof iconsMap>;
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -209,21 +209,21 @@ export default function LandingPage() {
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
-                    <Database className="h-4 w-4 text-blue-400" />
+                    <SiAirtable size={35} className=" text-blue-400" />
                     <span className="text-sm">Database Trigger</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ArrowRight className="h-4 w-4 text-slate-500" />
+                    <ArrowDown className="h-6 w-6 text-slate-500" />
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
-                    <Code className="h-4 w-4 text-green-400" />
+                    <SiOpenai size={35} className=" text-green-400" />
                     <span className="text-sm">AI Processing</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ArrowRight className="h-4 w-4 text-slate-500" />
+                    <ArrowDown className="h-6 w-6 text-slate-500" />
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
-                    <Users className="h-4 w-4 text-purple-400" />
+                    <SiGmail size={35} className=" text-purple-400" />
                     <span className="text-sm">Send Notification</span>
                   </div>
                 </div>
@@ -237,7 +237,8 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Unsere Produkte
+              <span className="text-orange-500 font-bold"> Workflows </span> die
+              ihr Leben erleichtern
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -368,12 +369,6 @@ export default function LandingPage() {
 
         <div className="relative z-10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Beispiel Workflows
-              </h2>
-            </div>
-
             <div className="flex justify-between mb-20  ">
               <div className="flex  ">
                 <div className="flex-col bg-slate-900 p-10 rounded-2xl">
