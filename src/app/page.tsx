@@ -138,7 +138,7 @@ export default function LandingPage() {
                 <div className="h-8 w-8 rounded bg-orange-500 flex items-center justify-center">
                   <Workflow className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">FlowBroz</span>
+                <span className="text-xl font-bold">Young Digitalist</span>
               </div>
               <div className="hidden md:flex space-x-6">
                 <a
@@ -1163,17 +1163,23 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-10 pb-20 bg-slate-900/50">
+        <div className="relative">
+          <img
+            src="BackgroundProjects5.png"
+            className="absolute inset-0 w-full h-full"
+          ></img>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-10">
-              Revolutioniere dein Unternehmen
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 ">
               <span className="text-orange-500">
-                mit personalisierte Automatisierungen
+                {" "}
+                Personalisierte Automatisierungen
               </span>
             </h2>
-            <h3 className="text-3xl sm:text-4xl font-bold mb-4 mt-4">
-              gestaltet um Effizienz zu steigern und Zeit zu sparen
+            <h3 className="text-2xl sm:text-2xl font-bold mb-4 mt-4">
+              mit N8N und deren 500 Integrations
             </h3>
           </div>
           <div className="overflow-hidden mb-8 relative">
@@ -1188,7 +1194,7 @@ export default function LandingPage() {
                   >
                     <IconComponent
                       size={32}
-                      className="text-slate-300 hover:text-white transition-colors"
+                      className="text-slate-300 hover:text-orange-500 transition-colors"
                     />
                   </div>
                 );
@@ -1202,7 +1208,7 @@ export default function LandingPage() {
                   >
                     <IconComponent
                       size={32}
-                      className="text-slate-300 hover:text-white transition-colors"
+                      className="text-slate-300 hover:text-orange-500 transition-colors"
                     />
                   </div>
                 );
@@ -1222,7 +1228,7 @@ export default function LandingPage() {
                   >
                     <IconComponent
                       size={32}
-                      className="text-slate-300 hover:text-white transition-colors"
+                      className="text-slate-300 hover:text-orange-500 transition-colors"
                     />
                   </div>
                 );
@@ -1236,7 +1242,7 @@ export default function LandingPage() {
                   >
                     <IconComponent
                       size={32}
-                      className="text-slate-300 hover:text-white transition-colors"
+                      className="text-slate-300 hover:text-orange-500 transition-colors"
                     />
                   </div>
                 );
@@ -1255,8 +1261,8 @@ export default function LandingPage() {
               aufs nächste Level zu bringen ?
             </h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Arbeite mit FlowBrowz und automatisiere das, auf das niemand Lust
-              hat
+              Arbeite mit Young Digitalist und automatisiere das, auf das
+              niemand Lust hat
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -1278,7 +1284,7 @@ export default function LandingPage() {
                 <div className="h-8 w-8 rounded bg-orange-500 flex items-center justify-center">
                   <Workflow className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">FlowBroz</span>
+                <span className="text-xl font-bold">Young Digitalist</span>
               </div>
               <p className="text-sm text-slate-400">
                 The workflow automation platform for technical teams
