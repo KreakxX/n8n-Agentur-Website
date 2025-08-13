@@ -269,7 +269,7 @@ export default function LandingPage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
 
-              <Card className="bg-slate-800/80 border-slate-700 relative z-10 h-[100%]">
+              <Card className="bg-slate-800/60 border-slate-700 relative z-10 h-[100%]">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
@@ -290,7 +290,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl"></div>
-              <Card className="bg-slate-800/80 border-slate-700 relative z-10">
+              <Card className="bg-slate-800/60 border-slate-700 relative z-10">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
@@ -312,7 +312,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
-              <Card className="bg-slate-800/80 border-slate-700 z-10 relative">
+              <Card className="bg-slate-800/60 border-slate-700 z-10 relative">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
@@ -333,7 +333,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
-              <Card className="bg-slate-800/80 border-slate-700 z-10 relative h-[100%] ">
+              <Card className="bg-slate-800/60 border-slate-700 z-10 relative h-[100%] ">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
@@ -360,13 +360,11 @@ export default function LandingPage() {
         </div>
       </section>
       <section className="pt-24 pb-50 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
-        {/* Background decoration */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,146,60,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(251,146,60,0.05),transparent_50%)]" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center space-y-12">
-            {/* Enhanced headline with better typography */}
             <div className="space-y-6">
               <div className="inline-flex items-center gap-3 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full">
                 <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
@@ -407,9 +405,13 @@ export default function LandingPage() {
                           <Mail className="h-6 w-6 text-blue-400" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-white mb-2">
+                          <h3 className="font-semibold text-white mb-2 text-left">
                             Lead Generation
                           </h3>
+                          <p className="text-sm text-left">
+                            Automatisiere Leads und gewinne Vertrauen mit
+                            personalisierten Emails
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -431,9 +433,13 @@ export default function LandingPage() {
                           <Workflow className="h-6 w-6 text-green-400" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-white mb-2">
+                          <h3 className="font-semibold text-white mb-2 text-left">
                             Email Autoresponder
                           </h3>
+                          <p className="text-sm text-left">
+                            Antworten sie automatisch und personalisiert auf
+                            Emails, und gewinne mehr Kunden
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -455,9 +461,14 @@ export default function LandingPage() {
                           <UserCheck className="h-6 w-6 text-orange-400" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-white mb-2">
+                          <h3 className="font-semibold text-white mb-2 text-left">
                             Mitarbeiter verteilung
                           </h3>
+                          <p className="text-sm text-left">
+                            Verteile deine Aufgaben effizient und schnell auf
+                            all deine Mitarbeiter, ohne den Überblick zu
+                            verlieren
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -479,9 +490,13 @@ export default function LandingPage() {
                           <FileQuestionMark className="h-6 w-6 text-purple-400" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-white mb-2">
+                          <h3 className="font-semibold text-white mb-2 text-left">
                             Eigene Anfrage
                           </h3>
+                          <p className="text-sm text-left">
+                            Du hast eine eigene Idee bzw Aufgabe die
+                            Automatisiert werden soll
+                          </p>
                         </div>
                       </div>
                     </CardContent>
