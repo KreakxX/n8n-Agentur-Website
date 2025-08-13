@@ -384,23 +384,8 @@ export default function LandingPage() {
           <div className=" mx-auto ">
             <div className="flex justify-between   mb-20  ">
               <div className="flex  relative">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl ml-20 relative z-10">
+                <div className="flex-col bg-slate-900/50 p-10 rounded-2xl ml-20 relative z-10">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <div
-                        className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                        style={{
-                          animationDuration: "4s",
-                        }}
-                      />
-                      <div
-                        className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                        style={{
-                          animationDuration: "6s",
-                        }}
-                      />
-                    </div>
-
                     <div
                       className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
                       style={{
@@ -463,23 +448,8 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl mr-20 relative z-10 ">
+                <div className="flex-col bg-slate-900/50 p-10 rounded-2xl mr-20 relative z-10 ">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <div
-                        className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                        style={{
-                          animationDuration: "4s",
-                        }}
-                      />
-                      <div
-                        className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                        style={{
-                          animationDuration: "6s",
-                        }}
-                      />
-                    </div>
-
                     <div
                       className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
                       style={{
@@ -546,23 +516,8 @@ export default function LandingPage() {
 
             <div className="flex justify-between mb-10   ">
               <div className="flex ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl ml-20 relative z-10">
+                <div className="flex-col bg-slate-900/50 p-10 rounded-2xl ml-20 relative z-10">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <div
-                        className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                        style={{
-                          animationDuration: "4s",
-                        }}
-                      />
-                      <div
-                        className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                        style={{
-                          animationDuration: "6s",
-                        }}
-                      />
-                    </div>
-
                     <div
                       className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
                       style={{
@@ -623,23 +578,8 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl mr-20 relative z-10">
+                <div className="flex-col bg-slate-900/50 p-10 rounded-2xl mr-20 relative z-10">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <div
-                        className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                        style={{
-                          animationDuration: "4s",
-                        }}
-                      />
-                      <div
-                        className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                        style={{
-                          animationDuration: "6s",
-                        }}
-                      />
-                    </div>
-
                     <div
                       className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
                       style={{
