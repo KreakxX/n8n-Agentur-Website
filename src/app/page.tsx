@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
@@ -14,6 +14,7 @@ import {
   UserCheck,
   User,
   ArrowDown,
+  FileQuestionMark,
 } from "lucide-react";
 import {
   SiN8N,
@@ -116,6 +117,12 @@ export default function LandingPage() {
 
   const integrations = Object.keys(iconsMap) as Array<keyof typeof iconsMap>;
 
+  const [LeadGeneration, setLeadGeneration] = useState<boolean>(false);
+  const [EmailResponder, setEmailResponder] = useState<boolean>(false);
+  const [MitArbeiterVerteilung, setMitArbeiterVerteilung] =
+    useState<boolean>(false);
+  const [EigeneAnfrage, setEigeneAnfrage] = useState<boolean>(false);
+
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <nav className="border-b border-slate-800 bg-slate-950/95 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60">
@@ -141,6 +148,12 @@ export default function LandingPage() {
                   className="text-slate-300 hover:text-white transition-colors"
                 >
                   Preise
+                </a>
+                <a
+                  href="#"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
+                  Konfigurator
                 </a>
               </div>
             </div>
@@ -188,13 +201,13 @@ export default function LandingPage() {
                   size="lg"
                   className="bg-orange-500 hover:bg-orange-600 text-white"
                 >
-                  Kontakt
+                  Konfigurieren sie ihren Workflow
                 </Button>
               </div>
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/40 to-purple-500/40 blur-3xl"></div>
-              <div className="relative bg-slate-900 rounded-lg p-8 border border-slate-700">
+              <div className="relative bg-slate-900/80 rounded-lg p-8 border border-slate-700">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-2">
                     <Zap className="h-5 w-5 text-orange-500" />
@@ -210,28 +223,28 @@ export default function LandingPage() {
                   </Badge>
                 </div>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
+                  <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiAirtable size={35} className=" text-blue-400" />
                     <span className="text-sm">Database Trigger</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-slate-500" />
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
+                  <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiOpenai size={35} className=" text-green-400" />
                     <span className="text-sm">AI Processing</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-slate-500" />
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
+                  <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiGmail size={35} className=" text-purple-400" />
                     <span className="text-sm">Send Notification</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-slate-500" />
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
+                  <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <UserCheck size={35} className=" text-orange-400" />
                     <span className="text-sm">Get new Leads</span>
                   </div>
@@ -254,7 +267,7 @@ export default function LandingPage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
 
-              <Card className="bg-slate-800 border-slate-700 relative z-10 h-[100%]">
+              <Card className="bg-slate-800/80 border-slate-700 relative z-10 h-[100%]">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
@@ -275,7 +288,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl"></div>
-              <Card className="bg-slate-800 border-slate-700 relative z-10">
+              <Card className="bg-slate-800/80 border-slate-700 relative z-10">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
@@ -297,7 +310,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
-              <Card className="bg-slate-800 border-slate-700 z-10 relative">
+              <Card className="bg-slate-800/80 border-slate-700 z-10 relative">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
@@ -318,7 +331,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
-              <Card className="bg-slate-800 border-slate-700 z-10 relative h-[100%] ">
+              <Card className="bg-slate-800/80 border-slate-700 z-10 relative h-[100%] ">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
@@ -384,7 +397,7 @@ export default function LandingPage() {
           <div className=" mx-auto ">
             <div className="flex justify-between   mb-20  ">
               <div className="flex  relative">
-                <div className="flex-col bg-slate-900/50 p-10 rounded-2xl ml-20 relative z-10">
+                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl ml-20 relative z-10">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div
                       className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
@@ -448,7 +461,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex ">
-                <div className="flex-col bg-slate-900/50 p-10 rounded-2xl mr-20 relative z-10 ">
+                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl mr-20 relative z-10 ">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div
                       className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
@@ -516,7 +529,7 @@ export default function LandingPage() {
 
             <div className="flex justify-between mb-10   ">
               <div className="flex ">
-                <div className="flex-col bg-slate-900/50 p-10 rounded-2xl ml-20 relative z-10">
+                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl ml-20 relative z-10">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div
                       className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
@@ -578,7 +591,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex ">
-                <div className="flex-col bg-slate-900/50 p-10 rounded-2xl mr-20 relative z-10">
+                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl mr-20 relative z-10">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div
                       className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
@@ -645,8 +658,8 @@ export default function LandingPage() {
 
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-10">
               Revolutioniere dein Unternehmen
               <span className="text-orange-500">
                 mit personalisierte Automatisierungen
@@ -726,29 +739,133 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="py-20 bg-slate-900/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mt-20 text-orange-500">
+              Konfigurator
+            </h2>
+          </div>
+
+          <div className="flex justify-between gap-4 w-full mt-10">
+            <Card
+              onClick={() => {
+                setLeadGeneration(!LeadGeneration);
+                setEmailResponder(false);
+                setEigeneAnfrage(false);
+                setMitArbeiterVerteilung(false);
+              }}
+              className={`p-8 bg-slate-800/50 border-none w-full hover:bg-slate-800 ${
+                LeadGeneration ? "bg-slate-800" : ""
+              } transition-colors ease-in-out duration-300`}
+            >
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      Lead Generation
+                    </h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card
+              onClick={() => {
+                setEmailResponder(!EmailResponder);
+                setLeadGeneration(false);
+                setEigeneAnfrage(false);
+                setMitArbeiterVerteilung(false);
+              }}
+              className={`p-8 bg-slate-800/50 border-none w-full ${
+                EmailResponder ? "bg-slate-800" : ""
+              } hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+            >
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                    <Workflow className="h-6 w-6 text-green-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      Email Autoresponder
+                    </h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card
+              onClick={() => {
+                setMitArbeiterVerteilung(!MitArbeiterVerteilung);
+                setLeadGeneration(false);
+                setEigeneAnfrage(false);
+                setEmailResponder(false);
+              }}
+              className={`p-8 bg-slate-800/50 border-none ${
+                MitArbeiterVerteilung ? "bg-slate-800" : ""
+              } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+            >
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
+                    <UserCheck className="h-6 w-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      Mitarbeiter verteilung
+                    </h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card
+              onClick={() => {
+                setEigeneAnfrage(!EigeneAnfrage);
+                setLeadGeneration(false);
+                setEmailResponder(false);
+                setMitArbeiterVerteilung(false);
+              }}
+              className={`p-8 bg-slate-800/50 border-none ${
+                EigeneAnfrage ? "bg-slate-800" : ""
+              } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+            >
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <FileQuestionMark className="h-6 w-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      Eigene Anfrage
+                    </h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
             <h2 className="text-3xl sm:text-4xl font-bold">
-              Ready to get started?
+              Bist du bereit, dein{" "}
+              <span className="text-orange-500 font-bold">Unternehmen</span>{" "}
+              aufs nächste Level zu bringen ?
             </h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Join thousands of teams already automating their workflows with
-              FlowBroz
+              Arbeite mit FlowBrowz und automatisiere das, auf das niemand Lust
+              hat
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-orange-500 hover:bg-orange-600 text-white"
               >
-                Start building for free
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 bg-transparent"
-              >
-                Schedule a demo
+                Beratungstermin vereinbaren
               </Button>
             </div>
           </div>
