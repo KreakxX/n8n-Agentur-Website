@@ -15,6 +15,7 @@ import {
   User,
   ArrowDown,
   FileQuestionMark,
+  Info,
 } from "lucide-react";
 import {
   SiN8N,
@@ -64,6 +65,8 @@ import {
   SiGoogletasks,
 } from "react-icons/si";
 import { useEffect, useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function LandingPage() {
   const iconsMap = {
@@ -118,6 +121,8 @@ export default function LandingPage() {
   const integrations = Object.keys(iconsMap) as Array<keyof typeof iconsMap>;
 
   const [LeadGeneration, setLeadGeneration] = useState<boolean>(false);
+  const [personalisedEmails, setPersonalizedEmails] = useState<boolean>(false);
+  const [standardEmails, setStandardEmails] = useState<boolean>(false);
   const [EmailResponder, setEmailResponder] = useState<boolean>(false);
   const [MitArbeiterVerteilung, setMitArbeiterVerteilung] =
     useState<boolean>(false);
@@ -355,6 +360,508 @@ export default function LandingPage() {
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="py-20 bg-slate-950/20 mb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mt-20 text-orange-500">
+              Konfigurator
+            </h2>
+          </div>
+
+          <div className="flex justify-between gap-4 w-full mt-10">
+            <Card
+              onClick={() => {
+                setLeadGeneration(!LeadGeneration);
+                setPersonalizedEmails(false);
+                setStandardEmails(false);
+                setEmailResponder(false);
+                setEigeneAnfrage(false);
+                setMitArbeiterVerteilung(false);
+              }}
+              className={`p-8 bg-slate-800/50 border-none w-full hover:bg-slate-800 ${
+                LeadGeneration ? "bg-slate-800" : ""
+              } transition-colors ease-in-out duration-300`}
+            >
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      Lead Generation
+                    </h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card
+              onClick={() => {
+                setEmailResponder(!EmailResponder);
+                setLeadGeneration(false);
+                setEigeneAnfrage(false);
+                setMitArbeiterVerteilung(false);
+              }}
+              className={`p-8 bg-slate-800/50 border-none w-full ${
+                EmailResponder ? "bg-slate-800" : ""
+              } hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+            >
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                    <Workflow className="h-6 w-6 text-green-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      Email Autoresponder
+                    </h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card
+              onClick={() => {
+                setMitArbeiterVerteilung(!MitArbeiterVerteilung);
+                setLeadGeneration(false);
+                setEigeneAnfrage(false);
+                setEmailResponder(false);
+              }}
+              className={`p-8 bg-slate-800/50 border-none ${
+                MitArbeiterVerteilung ? "bg-slate-800" : ""
+              } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+            >
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
+                    <UserCheck className="h-6 w-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      Mitarbeiter verteilung
+                    </h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card
+              onClick={() => {
+                setEigeneAnfrage(!EigeneAnfrage);
+                setLeadGeneration(false);
+                setEmailResponder(false);
+                setMitArbeiterVerteilung(false);
+              }}
+              className={`p-8 bg-slate-800/50 border-none ${
+                EigeneAnfrage ? "bg-slate-800" : ""
+              } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+            >
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <FileQuestionMark className="h-6 w-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      Eigene Anfrage
+                    </h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          {LeadGeneration ? (
+            <div className="w-full">
+              <div className="flex justify-center items-center mt-10 animate-bounce ">
+                <ArrowDown className="text-orange-500"></ArrowDown>
+              </div>
+
+              <div className="flex justify-between gap-4 mt-10">
+                <Card
+                  onClick={() => {
+                    setPersonalizedEmails(!personalisedEmails);
+                    setStandardEmails(false);
+                  }}
+                  className={`p-8 bg-slate-800/50 border-none ${
+                    personalisedEmails ? "bg-slate-800" : ""
+                  } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                >
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Personalisierte Emails
+                        </h3>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card
+                  onClick={() => {
+                    setStandardEmails(!standardEmails);
+                    setPersonalizedEmails(false);
+                  }}
+                  className={`p-8 bg-slate-800/50 border-none ${
+                    standardEmails ? "bg-slate-800" : ""
+                  } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                >
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-purple-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Standard Emails
+                        </h3>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ) : null}
+
+          {standardEmails || personalisedEmails ? (
+            <div className="w-full">
+              <div className="flex justify-center items-center mt-10 animate-bounce ">
+                <ArrowDown className="text-orange-500"></ArrowDown>
+              </div>
+
+              <div className="flex justify-center gap-4 mt-10">
+                <Card className={`p-8 bg-slate-800/50 border-none  w-full`}>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Kontakt Email
+                        </h3>
+                      </div>
+                      <Input className="border-slate-700 text-white"></Input>
+                    </div>
+
+                    <div className="space-y-4 mt-10">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Info className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Zusätzliche Informationen
+                        </h3>
+                      </div>
+                      <Textarea className="border-slate-700 text-white"></Textarea>
+                    </div>
+
+                    <div className="flex justify-center items-center mt-10">
+                      <Button className="p-6 bg-orange-500">
+                        Auftrag bearbeiten
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ) : null}
+          {EmailResponder ? (
+            <div className="w-full">
+              <div className="flex justify-center items-center mt-10 animate-bounce ">
+                <ArrowDown className="text-orange-500"></ArrowDown>
+              </div>
+
+              <div className="flex justify-between gap-4 mt-10">
+                <Card
+                  onClick={() => {
+                    setPersonalizedEmails(!personalisedEmails);
+                    setStandardEmails(false);
+                  }}
+                  className={`p-8 bg-slate-800/50 border-none ${
+                    personalisedEmails ? "bg-slate-800" : ""
+                  } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                >
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Personalisierte Emails
+                        </h3>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card
+                  onClick={() => {
+                    setStandardEmails(!standardEmails);
+                    setPersonalizedEmails(false);
+                  }}
+                  className={`p-8 bg-slate-800/50 border-none ${
+                    standardEmails ? "bg-slate-800" : ""
+                  } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                >
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-purple-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Standard Emails
+                        </h3>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ) : null}
+
+          {standardEmails || personalisedEmails ? (
+            <div className="w-full">
+              <div className="flex justify-center items-center mt-10 animate-bounce ">
+                <ArrowDown className="text-orange-500"></ArrowDown>
+              </div>
+
+              <div className="flex justify-center gap-4 mt-10">
+                <Card className={`p-8 bg-slate-800/50 border-none  w-full`}>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Kontakt Email
+                        </h3>
+                      </div>
+                      <Input className="border-slate-700 text-white"></Input>
+                    </div>
+
+                    <div className="space-y-4 mt-10">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Info className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Zusätzliche Informationen
+                        </h3>
+                      </div>
+                      <Textarea className="border-slate-700 text-white"></Textarea>
+                    </div>
+
+                    <div className="flex justify-center items-center mt-10">
+                      <Button className="p-6 bg-orange-500">
+                        Auftrag bearbeiten
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ) : null}
+          {MitArbeiterVerteilung ? (
+            <div className="w-full">
+              <div className="flex justify-center items-center mt-10 animate-bounce ">
+                <ArrowDown className="text-orange-500"></ArrowDown>
+              </div>
+
+              <div className="flex justify-between gap-4 mt-10">
+                <Card
+                  onClick={() => {
+                    setPersonalizedEmails(!personalisedEmails);
+                    setStandardEmails(false);
+                  }}
+                  className={`p-8 bg-slate-800/50 border-none ${
+                    personalisedEmails ? "bg-slate-800" : ""
+                  } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                >
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Personalisierte Emails
+                        </h3>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card
+                  onClick={() => {
+                    setStandardEmails(!standardEmails);
+                    setPersonalizedEmails(false);
+                  }}
+                  className={`p-8 bg-slate-800/50 border-none ${
+                    standardEmails ? "bg-slate-800" : ""
+                  } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                >
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-purple-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Standard Emails
+                        </h3>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ) : null}
+
+          {standardEmails || personalisedEmails ? (
+            <div className="w-full">
+              <div className="flex justify-center items-center mt-10 animate-bounce ">
+                <ArrowDown className="text-orange-500"></ArrowDown>
+              </div>
+
+              <div className="flex justify-center gap-4 mt-10">
+                <Card className={`p-8 bg-slate-800/50 border-none  w-full`}>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Kontakt Email
+                        </h3>
+                      </div>
+                      <Input className="border-slate-700 text-white"></Input>
+                    </div>
+
+                    <div className="space-y-4 mt-10">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Info className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Zusätzliche Informationen
+                        </h3>
+                      </div>
+                      <Textarea className="border-slate-700 text-white"></Textarea>
+                    </div>
+
+                    <div className="flex justify-center items-center mt-10">
+                      <Button className="p-6 bg-orange-500">
+                        Auftrag bearbeiten
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ) : null}
+          {EigeneAnfrage ? (
+            <div className="w-full">
+              <div className="flex justify-center items-center mt-10 animate-bounce ">
+                <ArrowDown className="text-orange-500"></ArrowDown>
+              </div>
+
+              <div className="flex justify-between gap-4 mt-10">
+                <Card
+                  onClick={() => {
+                    setPersonalizedEmails(!personalisedEmails);
+                    setStandardEmails(false);
+                  }}
+                  className={`p-8 bg-slate-800/50 border-none ${
+                    personalisedEmails ? "bg-slate-800" : ""
+                  } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                >
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Personalisierte Emails
+                        </h3>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card
+                  onClick={() => {
+                    setStandardEmails(!standardEmails);
+                    setPersonalizedEmails(false);
+                  }}
+                  className={`p-8 bg-slate-800/50 border-none ${
+                    standardEmails ? "bg-slate-800" : ""
+                  } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                >
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-purple-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Standard Emails
+                        </h3>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ) : null}
+
+          {standardEmails || personalisedEmails ? (
+            <div className="w-full">
+              <div className="flex justify-center items-center mt-10 animate-bounce ">
+                <ArrowDown className="text-orange-500"></ArrowDown>
+              </div>
+
+              <div className="flex justify-center gap-4 mt-10">
+                <Card className={`p-8 bg-slate-800/50 border-none  w-full`}>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Kontakt Email
+                        </h3>
+                      </div>
+                      <Input className="border-slate-700 text-white"></Input>
+                    </div>
+
+                    <div className="space-y-4 mt-10">
+                      <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        <Info className="h-6 w-6 text-blue-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          Zusätzliche Informationen
+                        </h3>
+                      </div>
+                      <Textarea className="border-slate-700 text-white"></Textarea>
+                    </div>
+
+                    <div className="flex justify-center items-center mt-10">
+                      <Button className="p-6 bg-orange-500">
+                        Auftrag bearbeiten
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
 
@@ -739,115 +1246,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-8">
-            <h2 className="text-3xl sm:text-4xl font-bold mt-20 text-orange-500">
-              Konfigurator
-            </h2>
-          </div>
-
-          <div className="flex justify-between gap-4 w-full mt-10">
-            <Card
-              onClick={() => {
-                setLeadGeneration(!LeadGeneration);
-                setEmailResponder(false);
-                setEigeneAnfrage(false);
-                setMitArbeiterVerteilung(false);
-              }}
-              className={`p-8 bg-slate-800/50 border-none w-full hover:bg-slate-800 ${
-                LeadGeneration ? "bg-slate-800" : ""
-              } transition-colors ease-in-out duration-300`}
-            >
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white mb-2">
-                      Lead Generation
-                    </h3>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card
-              onClick={() => {
-                setEmailResponder(!EmailResponder);
-                setLeadGeneration(false);
-                setEigeneAnfrage(false);
-                setMitArbeiterVerteilung(false);
-              }}
-              className={`p-8 bg-slate-800/50 border-none w-full ${
-                EmailResponder ? "bg-slate-800" : ""
-              } hover:bg-slate-800 transition-colors ease-in-out duration-300`}
-            >
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
-                    <Workflow className="h-6 w-6 text-green-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white mb-2">
-                      Email Autoresponder
-                    </h3>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card
-              onClick={() => {
-                setMitArbeiterVerteilung(!MitArbeiterVerteilung);
-                setLeadGeneration(false);
-                setEigeneAnfrage(false);
-                setEmailResponder(false);
-              }}
-              className={`p-8 bg-slate-800/50 border-none ${
-                MitArbeiterVerteilung ? "bg-slate-800" : ""
-              } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
-            >
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
-                    <UserCheck className="h-6 w-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white mb-2">
-                      Mitarbeiter verteilung
-                    </h3>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card
-              onClick={() => {
-                setEigeneAnfrage(!EigeneAnfrage);
-                setLeadGeneration(false);
-                setEmailResponder(false);
-                setMitArbeiterVerteilung(false);
-              }}
-              className={`p-8 bg-slate-800/50 border-none ${
-                EigeneAnfrage ? "bg-slate-800" : ""
-              } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
-            >
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                    <FileQuestionMark className="h-6 w-6 text-purple-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white mb-2">
-                      Eigene Anfrage
-                    </h3>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
@@ -872,7 +1270,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t border-slate-800 py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
