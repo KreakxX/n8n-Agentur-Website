@@ -174,11 +174,13 @@ export default function LandingPage() {
                 </h1>
 
                 <p className="text-lg text-slate-300 max-w-2xl">
-                  Entwickeln Sie mit der Präzision von Code oder der
-                  Geschwindigkeit von Drag-and-Drop. Hosten Sie mit
-                  vollständiger On-Premise-Kontrolle oder der Bequemlichkeit der
-                  Cloud. n8n bietet Ihnen mehr Freiheit, mehrstufige KI-Agenten
-                  umzusetzen und Apps zu integrieren als jedes andere Tool.
+                  Setzen Sie Workflows mit der Präzision von Code oder der
+                  Geschwindigkeit von Drag-and-Drop um. Ob On-Premise oder in
+                  der Cloud – wir bieten vollständige Kontrolle und maximale
+                  Flexibilität. Unsere n8n Workflow-Agentur hilft Ihnen,
+                  mehrstufige Automatisierungen, KI-Agenten und
+                  App-Integrationen schneller und effizienter als je zuvor zu
+                  realisieren.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -225,6 +227,13 @@ export default function LandingPage() {
                   <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
                     <SiGmail size={35} className=" text-purple-400" />
                     <span className="text-sm">Send Notification</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <ArrowDown className="h-6 w-6 text-slate-500" />
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-slate-800 rounded border border-slate-600">
+                    <UserCheck size={35} className=" text-orange-400" />
+                    <span className="text-sm">Get new Leads</span>
                   </div>
                 </div>
               </div>
@@ -366,12 +375,16 @@ export default function LandingPage() {
             }}
           />
         </div>
+        <img
+          src="BackgroundProjects.png"
+          className="absolute inset-0 w-full h-full"
+        ></img>
 
         <div className="relative z-10">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between mb-20  ">
+          <div className="container mx-auto ">
+            <div className="flex justify-between  mb-20  ">
               <div className="flex  ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl">
+                <div className="flex-col bg-slate-900 p-10 rounded-2xl ">
                   <img
                     className="h-[300px] w-[600px] rounded-lg mb-10"
                     src={"LeadAutomationWorkflow.png"}
@@ -421,7 +434,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl">
+                <div className="flex-col bg-slate-900 p-10 rounded-2xl ">
                   <img
                     className="h-[300px] w-[600px] rounded-lg mb-10"
                     src={"MitarbeiterWorkflow.png"}
