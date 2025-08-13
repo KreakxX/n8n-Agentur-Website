@@ -381,10 +381,10 @@ export default function LandingPage() {
         ></img>
 
         <div className="relative z-10">
-          <div className="container mx-auto ">
-            <div className="flex justify-between  mb-20  ">
+          <div className=" mx-auto ">
+            <div className="flex justify-between   mb-20  ">
               <div className="flex  ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl ">
+                <div className="flex-col bg-slate-900 p-10 rounded-2xl ml-20 ">
                   <img
                     className="h-[300px] w-[600px] rounded-lg mb-10"
                     src={"LeadAutomationWorkflow.png"}
@@ -434,7 +434,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl ">
+                <div className="flex-col bg-slate-900 p-10 rounded-2xl mr-20 ">
                   <img
                     className="h-[300px] w-[600px] rounded-lg mb-10"
                     src={"MitarbeiterWorkflow.png"}
@@ -488,7 +488,7 @@ export default function LandingPage() {
 
             <div className="flex justify-between mb-10  ">
               <div className="flex ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl">
+                <div className="flex-col bg-slate-900 p-10 rounded-2xl ml-20">
                   <img
                     className="h-[300px] w-[600px] rounded-lg mb-10"
                     src={"AutoResponder.png"}
@@ -536,7 +536,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex ">
-                <div className="flex-col bg-slate-900 p-10 rounded-2xl">
+                <div className="flex-col bg-slate-900 p-10 rounded-2xl mr-20">
                   <img
                     className="h-[300px] w-[600px] rounded-lg mb-10"
                     src={"LeadAutomationWorkflow.png"}
