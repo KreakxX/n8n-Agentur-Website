@@ -152,6 +152,9 @@ export default function LandingPage() {
   const [oneSocial, setOneSocial] = useState<boolean>(false);
   const [fourSocial, setFourSocial] = useState<boolean>(false);
 
+  const [support, setSupport] = useState<boolean>(false);
+  const [allinOne, setAllInOne] = useState<boolean>(false);
+
   const [EigeneAnfrage, setEigeneAnfrage] = useState<boolean>(false);
 
   return (
@@ -798,7 +801,7 @@ export default function LandingPage() {
                           setIntegrationDistribution(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          personalisedEmails ? "bg-slate-700" : ""
+                          Gmaildistribution ? "bg-slate-700" : ""
                         } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
@@ -832,7 +835,7 @@ export default function LandingPage() {
                           setIntegrationDistribution(!IntegrationDistribution);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          standardEmails ? "bg-slate-700" : ""
+                          IntegrationDistribution ? "bg-slate-700" : ""
                         } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
@@ -890,7 +893,7 @@ export default function LandingPage() {
                           setFourSocial(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          personalisedEmails ? "bg-slate-700" : ""
+                          oneSocial ? "bg-slate-700" : ""
                         } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
@@ -924,7 +927,7 @@ export default function LandingPage() {
                           setFourSocial(!fourSocial);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          standardEmails ? "bg-slate-700" : ""
+                          fourSocial ? "bg-slate-700" : ""
                         } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
@@ -965,6 +968,93 @@ export default function LandingPage() {
                   </div>
                 ) : null}
 
+                {MobileAgent ? (
+                  <div className="w-full">
+                    <div className="flex justify-center items-center mt-10 animate-bounce ">
+                      <ArrowDown className="text-orange-500"></ArrowDown>
+                    </div>
+
+                    <div className="flex justify-between gap-4 mt-10">
+                      <Card
+                        onClick={() => {
+                          setSupport(!support);
+                          setAllInOne(false);
+                        }}
+                        className={`p-8 bg-slate-800/50 border-none ${
+                          support ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
+                      >
+                        <CardContent>
+                          <div className="space-y-4">
+                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                              <Smartphone className="h-6 w-6 text-blue-400" />
+                            </div>
+                            <div>
+                              <h3 className="font-semibold text-white mb-2 text-left">
+                                Kundensupport
+                              </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Automatischer KI Telefon Agent für ihren
+                                Kundensupport
+                              </p>
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                      <Card
+                        onClick={() => {
+                          setSupport(false);
+                          setAllInOne(!allinOne);
+                        }}
+                        className={`p-8 bg-slate-800/50 border-none ${
+                          allinOne ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
+                      >
+                        <CardContent>
+                          <div className="space-y-4">
+                            <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                              <SiGooglecalendar className="h-6 w-6 text-purple-400" />
+                            </div>
+                            <div>
+                              <h3 className="font-semibold text-white mb-2 text-left">
+                                All in One
+                              </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Automatischer KI Telefon Agent, an ihre
+                                Forderungen angepasst
+                              </p>
+
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <SiGooglecalendar className="w-6 h-6 text-green-500" />
+                                </div>
+
+                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                  <SiWhatsapp className="w-6 h-6 text-blue-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                                  <SiTelegram className="w-6 h-6 text-yellow-500" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </div>
+                ) : null}
+
                 {/* Step 2 */}
                 {standardEmails ||
                 personalisedEmails ||
@@ -972,7 +1062,9 @@ export default function LandingPage() {
                 IntegrationDistribution ||
                 Gmaildistribution ||
                 fourSocial ||
-                oneSocial ? (
+                oneSocial ||
+                allinOne ||
+                support ? (
                   <div className="w-full max-w-2xl mx-auto">
                     <div className="flex justify-center items-center mt-16 mb-12">
                       <div className="animate-bounce">
