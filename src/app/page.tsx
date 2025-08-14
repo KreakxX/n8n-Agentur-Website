@@ -13,6 +13,10 @@ import {
   ArrowDown,
   Info,
   FileQuestionMark,
+  Building2,
+  BrainCog,
+  Scale,
+  Expand,
 } from "lucide-react";
 import {
   SiN8N,
@@ -163,7 +167,7 @@ export default function LandingPage() {
         </div>
       </nav>
 
-      <section className="relative overflow-hidden py-20 sm:py-32">
+      <section className="relative overflow-hidden py-20  xl:h-[95vh] sm:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
@@ -284,31 +288,32 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-950/20">
+      <section className="py-20  bg-slate-950/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              <span className="text-orange-500 font-bold"> Workflows </span> die
-              ihr Leben erleichtern
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              <span className="text-orange-500 font-bold "> Workflows </span>{" "}
+              die ihr Leben erleichtern
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-purple-500/30 blur-3xl "></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 blur-3xl"></div>
 
               <Card className="bg-slate-800/60 border-slate-700 relative z-10 h-[100%]">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                      <Mail className="h-6 w-6 text-blue-400" />
+                      <Building2 className="h-6 w-6 text-blue-400" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-white mb-2">
-                        Lead Generation
+                        Personalisiert an ihr Unternehmen
                       </h3>
                       <p className="text-sm text-slate-300">
-                        Personalisierte Lead Generation individuell an dein
-                        Unternehmen angepasst
+                        Unsere Workflows sind personalisiert an ihr Unternehmen
+                        und ihre Wünsche, um das bestmöglichste Ziel zu
+                        erreichen
                       </p>
                     </div>
                   </div>
@@ -316,21 +321,21 @@ export default function LandingPage() {
               </Card>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-purple-500/30 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 blur-3xl"></div>
               <Card className="bg-slate-800/60 border-slate-700 relative z-10">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
-                      <UserCheck className="h-6 w-6 text-green-400" />
+                      <Zap className="h-6 w-6 text-green-400" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-white mb-2">
-                        Mitarbeiter Verteilung
+                        Effizient und Zeitsparend
                       </h3>
                       <p className="text-sm text-slate-300">
-                        Verteile automatische Aufgaben an deine Mitarbeiter, und
-                        steigere die Effizienz deines Unternehmens und spare
-                        Zeit
+                        Unsere Workflows sind dafür da, Zeit ihn ihrem
+                        Unternehmen zu sparen, das erreichen wir durch
+                        effiziente Workflows
                       </p>
                     </div>
                   </div>
@@ -338,20 +343,21 @@ export default function LandingPage() {
               </Card>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-purple-500/30 blur-3xl "></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 blur-3xl"></div>
               <Card className="bg-slate-800/60 border-slate-700 z-10 relative">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                      <Workflow className="h-6 w-6 text-purple-400" />
+                      <BrainCog className="h-6 w-6 text-purple-400" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-white mb-2">
-                        Email Autoresponder
+                        First Mover
                       </h3>
                       <p className="text-sm text-slate-300">
-                        Automatisierte und personalisierte Antworten auf
-                        Unternehmens um Leads und Umsatz zu steigern
+                        Sie werden die neuesten Technologien und KI Modelle
+                        nutzen, um ganz Oben zu sein, und somit Konkurrenz zu
+                        überperformen
                       </p>
                     </div>
                   </div>
@@ -359,24 +365,21 @@ export default function LandingPage() {
               </Card>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-purple-500/50 blur-3xl "></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 blur-3xl"></div>
               <Card className="bg-slate-800/60 border-slate-700 z-10 relative h-[100%] ">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
-                      <Users className="h-6 w-6 text-orange-400" />
+                      <Expand className="h-6 w-6 text-orange-400" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-white mb-2">
-                        Eigene Anfragen
+                        Skaliebar mit ihrem Wachstum
                       </h3>
                       <p className="text-sm text-slate-300">
-                        Gib uns eine Anfrage zum automatisieren, und wir werden
-                        <span className="line-through  text-red-500 font-bold">
-                          {"  "}
-                          versuchen{"  "}
-                        </span>
-                        es umzusetzen
+                        Unsere Automatisierung wachsen mit ihrem Unternehmen und
+                        passen sich flexibel an neue Prozesse und Anforderungen
+                        an
                       </p>
                     </div>
                   </div>
@@ -970,7 +973,7 @@ export default function LandingPage() {
           className="absolute inset-0 w-full h-full opacity-70"
           style={{
             maskImage:
-              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 5%, rgba(0,0,0,0.8) 30%, black 50%)",
             WebkitMaskImage:
               "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
           }}
