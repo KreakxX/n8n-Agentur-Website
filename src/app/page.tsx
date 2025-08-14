@@ -17,6 +17,8 @@ import {
   BrainCog,
   Scale,
   Expand,
+  Instagram,
+  Smartphone,
 } from "lucide-react";
 import {
   SiN8N,
@@ -415,7 +417,7 @@ export default function LandingPage() {
 
             <div className="relative">
               <div className="mt-16  opacity-50">
-                <div className="flex justify-between gap-4 w-full mt-10">
+                <div className="grid grid-cols-3 gap-4 w-full mt-10">
                   <Card
                     onClick={() => {
                       setLeadGeneration(!LeadGeneration);
@@ -526,6 +528,63 @@ export default function LandingPage() {
                           <p className="text-sm text-left">
                             Du hast eine eigene Idee bzw Aufgabe die
                             Automatisiert werden soll
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card
+                    onClick={() => {
+                      setEigeneAnfrage(!EigeneAnfrage);
+                      setLeadGeneration(false);
+                      setEmailResponder(false);
+                      setMitArbeiterVerteilung(false);
+                    }}
+                    className={`p-8 bg-slate-800/50 border-none ${
+                      EigeneAnfrage ? "bg-slate-800" : ""
+                    } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                  >
+                    <CardContent>
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-yellow-500/10 rounded-lg flex items-center justify-center">
+                          <Instagram className="h-6 w-6 text-yellow-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2 text-left">
+                            Instagram, Twitter, Facebook Automatisierung
+                          </h3>
+                          <p className="text-sm text-left">
+                            Wir automatisieren dir den Video Upload auf mehreren
+                            Plattformen
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  <Card
+                    onClick={() => {
+                      setEigeneAnfrage(!EigeneAnfrage);
+                      setLeadGeneration(false);
+                      setEmailResponder(false);
+                      setMitArbeiterVerteilung(false);
+                    }}
+                    className={`p-8 bg-slate-800/50 border-none ${
+                      EigeneAnfrage ? "bg-slate-800" : ""
+                    } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                  >
+                    <CardContent>
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-red-500/10 rounded-lg flex items-center justify-center">
+                          <Smartphone className="h-6 w-6 text-red-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2 text-left">
+                            Automatische Telefon Assistenten
+                          </h3>
+                          <p className="text-sm text-left">
+                            Kundensupport, Terminbuchungen, Fragen alles durch
+                            ein KI Telefonagenten gemanaged
                           </p>
                         </div>
                       </div>
