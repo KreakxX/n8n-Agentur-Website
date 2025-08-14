@@ -1001,22 +1001,58 @@ export default function LandingPage() {
       </section>
 
       <section className="relative overflow-hidden py-20 sm:py-32">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div
+              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+              style={{
+                animationDuration: "4s",
+              }}
+            />
+            <div
+              className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
+              style={{
+                animationDuration: "6s",
+              }}
+            />
+          </div>
+
+          <div
+            className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+            style={{
+              animationDuration: "4s",
+            }}
+          />
+          <div
+            className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
+            style={{
+              animationDuration: "6s",
+            }}
+          />
+        </div>
         <div className="relative z-10">
           <h2 className="text-center font-bold text-5xl mb-10">
-            Warum AI{" "}
-            <span className="font-bold text-orange-500"> Automatisierung </span>
+            Braucht ihr Unternehmen
+            <span className="font-bold text-orange-500">
+              {" "}
+              Automatisierung ?{" "}
+            </span>
           </h2>
 
           <div className=" mx-auto container flex items-center justify-center ">
             <Tabs
               defaultValue="IT"
-              className="w-3/4 bg-slate-900 pt-7 rounded-3xl"
+              className="w-3/4 bg-slate-900 pt-7 rounded-3xl border-2 border-slate-700"
             >
               <TabsList className="grid w-full grid-cols-3 gap-5 mb-18 px-3">
-                <TabsTrigger value="IT" className="text-sm p-6 bg-slate-800  ">
+                <TabsTrigger
+                  value="IT"
+                  className="text-sm p-6 bg-slate-900/40 border-2 border-slate-800  data-[state=active]:bg-orange-800 
+             data-[state=active]:border-orange-600"
+                >
                   <div className="flex justify-between">
-                    <div className="h-12 w-12 bg-red-500/10 rounded-lg flex items-center justify-center mr-5">
-                      <Building2 className="h-6 w-6 text-red-400" />
+                    <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
+                      <Building2 className="h-6 w-6 text-black" />
                     </div>
                     <div>
                       <h2 className="text-white font-bold text-left">
@@ -1028,10 +1064,14 @@ export default function LandingPage() {
                     </div>
                   </div>
                 </TabsTrigger>
-                <TabsTrigger value="Leads" className="text-sm p-6 bg-slate-800">
+                <TabsTrigger
+                  value="Leads"
+                  className="text-sm p-6 bg-slate-900/40 border-2 border-slate-800 data-[state=active]:bg-orange-800 
+             data-[state=active]:border-orange-600"
+                >
                   <div className="flex justify-between">
-                    <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center mr-5">
-                      <ChartNoAxesCombined className="h-6 w-6 text-green-400" />
+                    <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
+                      <ChartNoAxesCombined className="h-6 w-6 text-black" />
                     </div>
                     <div>
                       <h2 className="text-white font-bold text-left">
@@ -1046,11 +1086,12 @@ export default function LandingPage() {
                 </TabsTrigger>
                 <TabsTrigger
                   value="DevOps"
-                  className="text-sm p-6 bg-slate-800"
+                  className="text-sm p-6  bg-slate-900/40 border-2 border-slate-800 data-[state=active]:bg-orange-800 
+             data-[state=active]:border-orange-600"
                 >
                   <div className="flex justify-between">
-                    <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center mr-5">
-                      <Instagram className="h-6 w-6 text-blue-400" />
+                    <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
+                      <Instagram className="h-6 w-6 text-black" />
                     </div>
                     <div>
                       <h2 className="text-white font-bold text-left">
