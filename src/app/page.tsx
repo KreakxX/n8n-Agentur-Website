@@ -1031,14 +1031,6 @@ export default function LandingPage() {
           />
         </div>
         <div className="relative z-10">
-          <h2 className="text-center font-bold text-5xl mb-10">
-            Braucht ihr Unternehmen
-            <span className="font-bold text-orange-500">
-              {" "}
-              Automatisierung ?{" "}
-            </span>
-          </h2>
-
           <div className=" mx-auto container flex items-center justify-center ">
             <Tabs
               defaultValue="IT"
@@ -1052,7 +1044,7 @@ export default function LandingPage() {
                 >
                   <div className="flex justify-between">
                     <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
-                      <Building2 className="h-6 w-6 text-black" />
+                      <Building2 className="h-6 w-6 text-orange-500" />
                     </div>
                     <div>
                       <h2 className="text-white font-bold text-left">
@@ -1071,7 +1063,7 @@ export default function LandingPage() {
                 >
                   <div className="flex justify-between">
                     <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
-                      <ChartNoAxesCombined className="h-6 w-6 text-black" />
+                      <ChartNoAxesCombined className="h-6 w-6 text-orange-500" />
                     </div>
                     <div>
                       <h2 className="text-white font-bold text-left">
@@ -1091,7 +1083,7 @@ export default function LandingPage() {
                 >
                   <div className="flex justify-between">
                     <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
-                      <Instagram className="h-6 w-6 text-black" />
+                      <Instagram className="h-6 w-6 text-orange-500" />
                     </div>
                     <div>
                       <h2 className="text-white font-bold text-left">
