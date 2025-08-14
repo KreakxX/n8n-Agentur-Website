@@ -69,6 +69,7 @@ import {
   SiGoogleads,
   SiGoogledocs,
   SiGoogletasks,
+  SiClaude,
 } from "react-icons/si";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -151,20 +152,13 @@ export default function LandingPage() {
                   href="#"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  Produkte
+                  Konfigurator
                 </a>
-
                 <a
                   href="#"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
                   Preise
-                </a>
-                <a
-                  href="#"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Konfigurator
                 </a>
               </div>
             </div>
@@ -1227,25 +1221,70 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-8">
-            <h2 className="text-3xl sm:text-4xl font-bold">
-              Bist du bereit, dein{" "}
-              <span className="text-orange-500 font-bold">Unternehmen</span>{" "}
-              aufs nächste Level zu bringen ?
-            </h2>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Arbeite mit Young Digitalist und automatisiere das, auf das
-              niemand Lust hat
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white"
-              >
-                Beratungstermin vereinbaren
-              </Button>
+      <section className="">
+        <div className="min-h-screen bg-slate-900 flex items-center justify-center p-8">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative ">
+                <img
+                  src="AIOrb.png"
+                  alt="Gradient Orb"
+                  className="w-[70%] h-[70%] lg:w-[500px] lg:h-[500px] scale-230 "
+                />
+              </div>
+            </div>
+
+            <div className="text-white space-y-8 lg:mt-24 ">
+              <div className="space-y-6">
+                <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+                  Bist du bereit, dein{" "}
+                  <span className="text-orange-500">Unternehmen</span> aufs
+                  nächste Level zu bringen?
+                </h1>
+
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Arbeite mit Young Digitalist und automatisiere das, auf das
+                  niemand Lust hat
+                </p>
+
+                <div className="space-y-4">
+                  <p className="text-gray-400">
+                    Wir helfen dir dabei, wiederkehrende Aufgaben zu
+                    automatisieren und deine Produktivität zu steigern. Von der
+                    Kundenakquise bis zur Rechnungsstellung - lass uns die
+                    langweiligen Sachen übernehmen, damit du dich auf das
+                    konzentrieren kannst, was wirklich wichtig ist.
+                  </p>
+
+                  <p className="text-gray-400">
+                    Unsere maßgeschneiderten Lösungen sparen dir nicht nur Zeit,
+                    sondern auch Geld. Durchschnittlich reduzieren unsere Kunden
+                    ihren Arbeitsaufwand um 60% bei gleichzeitig höherer
+                    Qualität und weniger Fehlern.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <SiOpenai className="w-8 h-8 text-green-500" />
+                </div>
+                <div className="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <SiGooglegemini className="w-8 h-8 text-blue-500" />
+                </div>
+                <div className="w-16 h-16 rounded-full bg-orange-500/20 flex items-center justify-center">
+                  <SiClaude className="w-8 h-8 text-orange-500" />
+                </div>
+              </div>
+
+              <div>
+                <Button
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-semibold rounded-lg"
+                >
+                  Beratungstermin vereinbaren
+                </Button>
+              </div>
             </div>
           </div>
         </div>
