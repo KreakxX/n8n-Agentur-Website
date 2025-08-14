@@ -21,6 +21,12 @@ import {
   Smartphone,
   ChartArea,
   ChartNoAxesCombined,
+  BookCheck,
+  CircleDollarSign,
+  ArrowRight,
+  Network,
+  Twitter,
+  Youtube,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -71,6 +77,8 @@ import {
   SiGoogletasks,
   SiClaude,
   SiOllama,
+  SiInstagram,
+  SiYoutube,
 } from "react-icons/si";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -137,6 +145,13 @@ export default function LandingPage() {
   const [MobileAgent, setMobileAgent] = useState<boolean>(false);
   const [MitArbeiterVerteilung, setMitArbeiterVerteilung] =
     useState<boolean>(false);
+  const [Gmaildistribution, setGmailDistribution] = useState<boolean>(false);
+  const [IntegrationDistribution, setIntegrationDistribution] =
+    useState<boolean>(false);
+
+  const [oneSocial, setOneSocial] = useState<boolean>(false);
+  const [fourSocial, setFourSocial] = useState<boolean>(false);
+
   const [EigeneAnfrage, setEigeneAnfrage] = useState<boolean>(false);
 
   return (
@@ -275,7 +290,7 @@ export default function LandingPage() {
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiGmail size={35} className=" text-purple-400" />
-                    <span className="text-sm">Send Notification</span>
+                    <span className="text-sm">Send Email</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-slate-500" />
@@ -628,9 +643,24 @@ export default function LandingPage() {
                               <Mail className="h-6 w-6 text-blue-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
+                              <h3 className="font-semibold text-white mb-2 text-left">
                                 Personalisierte Emails
                               </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Durch KI Recherche, und einem Email Template,
+                                entsteht eine seriöse personalisierte Email
+                              </p>
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <BookCheck className="w-6 h-6 text-green-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                  <ChartNoAxesCombined className="w-6 h-6 text-blue-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
@@ -650,9 +680,21 @@ export default function LandingPage() {
                               <Mail className="h-6 w-6 text-purple-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
+                              <h3 className="font-semibold text-white mb-2 text-left">
                                 Standard Emails
                               </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Standard Emails basierend auf einem vorgegebenen
+                                Template
+                              </p>
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
@@ -683,9 +725,24 @@ export default function LandingPage() {
                               <Mail className="h-6 w-6 text-blue-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
+                              <h3 className="font-semibold text-white mb-2 text-left">
                                 Personalisierte Emails
                               </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Durch KI Recherche, und einem Email Template,
+                                entsteht eine seriöse personalisierte Email
+                              </p>
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <BookCheck className="w-6 h-6 text-green-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                  <ChartNoAxesCombined className="w-6 h-6 text-blue-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
@@ -705,9 +762,21 @@ export default function LandingPage() {
                               <Mail className="h-6 w-6 text-purple-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
+                              <h3 className="font-semibold text-white mb-2 text-left">
                                 Standard Emails
                               </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Standard Emails basierend auf einem vorgegebenen
+                                Template
+                              </p>
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
@@ -725,8 +794,8 @@ export default function LandingPage() {
                     <div className="flex justify-between gap-4 mt-10">
                       <Card
                         onClick={() => {
-                          setPersonalizedEmails(!personalisedEmails);
-                          setStandardEmails(false);
+                          setGmailDistribution(!Gmaildistribution);
+                          setIntegrationDistribution(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
                           personalisedEmails ? "bg-slate-700" : ""
@@ -735,20 +804,32 @@ export default function LandingPage() {
                         <CardContent>
                           <div className="space-y-4">
                             <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-blue-400" />
+                              <Network className="h-6 w-6 text-blue-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Personalisierte Emails
+                              <h3 className="font-semibold text-white mb-2 text-left">
+                                Verteilung mit Gmail
                               </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Automatischer Versand einer Email mit allen
+                                wichtigen Informationen an all deine Mitarbeiter
+                              </p>
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
                       </Card>
                       <Card
                         onClick={() => {
-                          setStandardEmails(!standardEmails);
-                          setPersonalizedEmails(false);
+                          setGmailDistribution(false);
+                          setIntegrationDistribution(!IntegrationDistribution);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
                           standardEmails ? "bg-slate-700" : ""
@@ -760,9 +841,34 @@ export default function LandingPage() {
                               <Mail className="h-6 w-6 text-purple-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Standard Emails
+                              <h3 className="font-semibold text-white mb-2 text-left">
+                                Verteilung über Integrations
                               </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Automatische Verteilung von Aufgaben mit Tools
+                                wie Monday.com oder SLACK
+                              </p>
+
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <SiSlack className="w-6 h-6 text-green-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                  <SiTrello className="w-6 h-6 text-blue-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                                  <SiJira className="w-6 h-6 text-yellow-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
+                                  <SiHubspot className="w-6 h-6 text-red-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
+                                  <Zap className="w-6 h-6 text-purple-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
@@ -771,7 +877,7 @@ export default function LandingPage() {
                   </div>
                 ) : null}
 
-                {EigeneAnfrage ? (
+                {MarketingAutomation ? (
                   <div className="w-full">
                     <div className="flex justify-center items-center mt-10 animate-bounce ">
                       <ArrowDown className="text-orange-500"></ArrowDown>
@@ -780,44 +886,77 @@ export default function LandingPage() {
                     <div className="flex justify-between gap-4 mt-10">
                       <Card
                         onClick={() => {
-                          setPersonalizedEmails(!personalisedEmails);
-                          setStandardEmails(false);
+                          setOneSocial(!Gmaildistribution);
+                          setFourSocial(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          personalisedEmails ? "bg-slate-800" : ""
-                        } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                          personalisedEmails ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
                             <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-blue-400" />
+                              <Twitter className="h-6 w-6 text-blue-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Personalisierte Emails
+                              <h3 className="font-semibold text-white mb-2 text-left">
+                                1 Social Media
                               </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Automatische Post auf einem Social Media ihrer
+                                Wahl
+                              </p>
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
                       </Card>
                       <Card
                         onClick={() => {
-                          setStandardEmails(!standardEmails);
-                          setPersonalizedEmails(false);
+                          setOneSocial(false);
+                          setFourSocial(!fourSocial);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          standardEmails ? "bg-slate-800" : ""
-                        } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                          standardEmails ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
                             <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-purple-400" />
+                              <Youtube className="h-6 w-6 text-purple-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Standard Emails
+                              <h3 className="font-semibold text-white mb-2 text-left">
+                                Social King
                               </h3>
+                              <p className="text-sm text-gray-400 text-left">
+                                Automatische Post auf bis zu 4 sozialen Medien
+                              </p>
+
+                              <h2 className="text-left font-semibold  mt-2">
+                                Vorteile:
+                              </h2>
+                              <div className="flex items-center gap-4 mt-2 ">
+                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                                  <SiX className="w-6 h-6 text-green-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                  <SiInstagram className="w-6 h-6 text-blue-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                                  <SiYoutube className="w-6 h-6 text-yellow-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
+                                  <SiLinkedin className="w-6 h-6 text-red-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </CardContent>
@@ -827,49 +966,96 @@ export default function LandingPage() {
                 ) : null}
 
                 {/* Step 2 */}
-                {standardEmails || personalisedEmails ? (
-                  <div className="w-full">
-                    <div className="flex justify-center items-center mt-10 animate-bounce ">
-                      <ArrowDown className="text-orange-500"></ArrowDown>
+                {standardEmails ||
+                personalisedEmails ||
+                EigeneAnfrage ||
+                IntegrationDistribution ||
+                Gmaildistribution ||
+                fourSocial ||
+                oneSocial ? (
+                  <div className="w-full max-w-2xl mx-auto">
+                    <div className="flex justify-center items-center mt-16 mb-12">
+                      <div className="animate-bounce">
+                        <ArrowDown className="text-orange-500 h-6 w-6" />
+                      </div>
                     </div>
 
-                    <div className="flex justify-center gap-4 mt-10">
-                      <Card
-                        className={`p-8 bg-slate-800/50 border-none  w-full`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                    <Card className="bg-slate-800/60 border-slate-700/50 backdrop-blur-sm shadow-2xl">
+                      <CardContent className="p-8 space-y-8">
+                        {/* Header Section */}
+                        <div className="text-center mb-8">
+                          <h2 className="text-2xl font-bold text-white mb-2">
+                            Kontaktinformationen
+                          </h2>
+                          <p className="text-slate-400 text-sm">
+                            Bitte geben Sie Ihre Kontaktdaten ein, damit wir
+                            Ihren Auftrag bearbeiten können
+                          </p>
+                        </div>
+
+                        {/* Email Section */}
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-4 mb-3">
+                            <div className="h-12 w-12 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/20">
                               <Mail className="h-6 w-6 text-blue-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
+                              <h3 className="font-semibold text-white text-lg">
                                 Kontakt Email
                               </h3>
+                              <p className="text-slate-400 text-sm">
+                                Ihre E-Mail-Adresse für die Kommunikation
+                              </p>
                             </div>
-                            <Input className="border-slate-700 text-white"></Input>
                           </div>
+                          <Input
+                            className="border-slate-600 bg-slate-700/50 text-white placeholder:text-slate-400 focus:border-orange-500 focus:ring-orange-500/20 h-12 text-base"
+                            placeholder="beispiel@email.com"
+                            type="email"
+                          />
+                        </div>
 
-                          <div className="space-y-4 mt-10">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                        {/* Additional Information Section */}
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-4 mb-3">
+                            <div className="h-12 w-12 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/20">
                               <Info className="h-6 w-6 text-blue-400" />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Zusätzliche Informationen
+                              <h3 className="font-semibold text-white text-lg">
+                                Zusätzliche Informationen oder Beschreibung
+                                ihrer Anfrage
                               </h3>
+                              <p className="text-slate-400 text-sm">
+                                Weitere Details zu Ihrem Auftrag (optional)
+                              </p>
                             </div>
-                            <Textarea className="border-slate-700 text-white"></Textarea>
                           </div>
+                          <Textarea
+                            className="border-slate-600 bg-slate-700/50 text-white placeholder:text-slate-400 focus:border-orange-500 focus:ring-orange-500/20 min-h-[120px] text-base resize-none"
+                            placeholder="Beschreiben Sie hier weitere Details zu Ihrem Auftrag, spezielle Anforderungen oder Wünsche..."
+                          />
+                        </div>
 
-                          <div className="flex justify-center items-center mt-10">
-                            <Button className="p-6 bg-orange-500">
+                        {/* Submit Button */}
+                        <div className="pt-6">
+                          <Button className="w-full h-14 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]">
+                            <span className="flex items-center gap-2">
                               Auftrag bearbeiten
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
+                              <ArrowRight className="h-5 w-5" />
+                            </span>
+                          </Button>
+                        </div>
+
+                        {/* Footer Note */}
+                        <div className="text-center pt-4 border-t border-slate-700/50">
+                          <p className="text-slate-500 text-xs">
+                            Ihre Daten werden vertraulich behandelt und nur für
+                            die Auftragsbearbeitung verwendet
+                          </p>
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
                 ) : null}
               </div>
@@ -1169,7 +1355,7 @@ export default function LandingPage() {
                   size="lg"
                   className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-semibold rounded-lg"
                 >
-                  Beratungstermin vereinbaren
+                  Workflow Base Konfigurieren
                 </Button>
               </div>
             </div>
