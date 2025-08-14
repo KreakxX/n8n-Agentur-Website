@@ -11,8 +11,8 @@ import {
   UserCheck,
   User,
   ArrowDown,
-  FileQuestionMark,
   Info,
+  FileQuestionMark,
 } from "lucide-react";
 import {
   SiN8N,
@@ -165,16 +165,43 @@ export default function LandingPage() {
 
       <section className="relative overflow-hidden py-20 sm:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div
+              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+              style={{
+                animationDuration: "4s",
+              }}
+            />
+            <div
+              className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
+              style={{
+                animationDuration: "6s",
+              }}
+            />
+          </div>
+
           <div
-            className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+            className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
             style={{
               animationDuration: "4s",
             }}
           />
           <div
-            className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
+            className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
             style={{
               animationDuration: "6s",
+            }}
+          />
+        </div>
+        <div className="absolute inset-0 w-full h-full pointer-events-none">
+          <img
+            src="BackgroundProjects5.png"
+            className="absolute inset-0 w-full h-full opacity-50 pointer-events-none"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
             }}
           />
         </div>
@@ -267,7 +294,7 @@ export default function LandingPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-purple-500/30 blur-3xl "></div>
 
               <Card className="bg-slate-800/60 border-slate-700 relative z-10 h-[100%]">
                 <CardContent className="p-6">
@@ -289,7 +316,7 @@ export default function LandingPage() {
               </Card>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-purple-500/30 blur-3xl"></div>
               <Card className="bg-slate-800/60 border-slate-700 relative z-10">
                 <CardContent className="p-6">
                   <div className="space-y-4">
@@ -311,7 +338,7 @@ export default function LandingPage() {
               </Card>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-purple-500/30 blur-3xl "></div>
               <Card className="bg-slate-800/60 border-slate-700 z-10 relative">
                 <CardContent className="p-6">
                   <div className="space-y-4">
@@ -332,7 +359,7 @@ export default function LandingPage() {
               </Card>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/30 to-purple-500/30 blur-3xl "></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/50 to-purple-500/50 blur-3xl "></div>
               <Card className="bg-slate-800/60 border-slate-700 z-10 relative h-[100%] ">
                 <CardContent className="p-6">
                   <div className="space-y-4">
@@ -941,7 +968,13 @@ export default function LandingPage() {
         <img
           src="BackgroundProjects5.png"
           className="absolute inset-0 w-full h-full opacity-70"
-        ></img>
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+          }}
+        />
 
         <div className="relative z-10">
           <div className=" mx-auto ">
@@ -1208,10 +1241,18 @@ export default function LandingPage() {
 
       <section className="pt-10 pb-20 bg-slate-900/50">
         <div className="relative">
-          <img
-            src="BackgroundProjects5.png"
-            className="absolute inset-0 w-full h-full"
-          ></img>
+          <div className="absolute inset-0 w-full h-full">
+            <img
+              src="BackgroundProjects5.png"
+              className="absolute inset-0 w-full h-full"
+              style={{
+                maskImage:
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+              }}
+            />
+          </div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-20">
@@ -1259,7 +1300,6 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Zweite Reihe: Rechts nach Links */}
           <div className="overflow-hidden relative">
             <div className="flex animate-scroll-reverse gap-4 whitespace-nowrap">
               {integrations.slice(15, 30).map((iconName, index) => {
