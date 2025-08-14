@@ -19,7 +19,10 @@ import {
   Expand,
   Instagram,
   Smartphone,
+  ChartArea,
+  ChartNoAxesCombined,
 } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   SiN8N,
   SiWhatsapp,
@@ -290,8 +293,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20  bg-slate-950/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative bg-slate-950/20 h-full w-full overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
               <span className="text-orange-500 font-bold "> Workflows </span>{" "}
@@ -998,305 +1001,99 @@ export default function LandingPage() {
       </section>
 
       <section className="relative overflow-hidden py-20 sm:py-32">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div
-              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-              style={{
-                animationDuration: "4s",
-              }}
-            />
-            <div
-              className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-              style={{
-                animationDuration: "6s",
-              }}
-            />
-          </div>
-
-          <div
-            className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-            style={{
-              animationDuration: "4s",
-            }}
-          />
-          <div
-            className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-            style={{
-              animationDuration: "6s",
-            }}
-          />
-        </div>
-        <img
-          src="BackgroundProjects5.png"
-          className="absolute inset-0 w-full h-full opacity-70"
-          style={{
-            maskImage:
-              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 5%, rgba(0,0,0,0.8) 30%, black 50%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
-          }}
-        />
-
         <div className="relative z-10">
-          <div className=" mx-auto ">
-            <div className="flex justify-between   mb-20  ">
-              <div className="flex  relative">
-                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl ml-20 relative z-10">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div
-                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                      style={{
-                        animationDuration: "4s",
-                      }}
-                    />
-                    <div
-                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                      style={{
-                        animationDuration: "6s",
-                      }}
-                    />
-                  </div>
-                  <img
-                    className="h-[300px] w-[600px] rounded-lg mb-10"
-                    src={"LeadAutomationWorkflow.png"}
-                  ></img>
-                  <Card className="bg-slate-800 border-slate-700">
-                    <CardContent className="">
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                          <Mail className="h-6 w-6 text-blue-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2">
-                            Lead Generation
-                          </h3>
-                          <p className="text-sm text-slate-300">
-                            Personalisierte Lead Generation individuell an dein
-                            Unternehmen angepasst
-                          </p>
-                          <div className="flex justify-between max-w-[400px] mt-5">
-                            <p className="text-sm text-slate-300">
-                              Es funktioniert wie folgt, die Unternehmen werden
-                              mit{" "}
-                              <span className="text-blue-500 font-bold">
-                                {" "}
-                                Google Maps
-                              </span>{" "}
-                              rausgesucht, die Emails anschließend von der
-                              Website extrahiert. Der KI Agent nutzt
-                              anschließend die Informationen{" "}
-                              <span className="text-blue-500 font-bold">
-                                {" "}
-                                ihres{" "}
-                              </span>{" "}
-                              Unternehmens und die Informationen von der Website
-                              des potentiellen{" "}
-                              <span className="text-blue-500 font-bold">
-                                Kunden
-                              </span>{" "}
-                              um eine personalisierte einzigartige Email zu
-                              verfassen und abzusenden{" "}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-              <div className="flex ">
-                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl mr-20 relative z-10 ">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div
-                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                      style={{
-                        animationDuration: "4s",
-                      }}
-                    />
-                    <div
-                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                      style={{
-                        animationDuration: "6s",
-                      }}
-                    />
-                  </div>
-                  <img
-                    className="h-[300px] w-[600px] rounded-lg mb-10"
-                    src={"MitarbeiterWorkflow.png"}
-                  ></img>
-                  <Card className="bg-slate-800 border-slate-700">
-                    <CardContent className="">
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
-                          <UserCheck className="h-6 w-6 text-green-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2">
-                            Mitarbeiter Verteilung
-                          </h3>
-                          <p className="text-sm text-slate-300 max-w-[440px]">
-                            Verteile automatische Aufgaben an{" "}
-                            <span className="text-green-500 font-bold">
-                              {" "}
-                              deine Mitarbeiter{" "}
-                            </span>
-                            , und steigere die Effizienz deines Unternehmens und
-                            spare Zeit
-                          </p>
-                          <div className="flex justify-between max-w-[400px] mt-5">
-                            <p className="text-sm text-slate-300">
-                              Es funktioniert so, sobald ein lead geantwortet
-                              hat, wird der{" "}
-                              <span className="font-bold text-green-500">
-                                {" "}
-                                KI Agent{" "}
-                              </span>{" "}
-                              uns sagen, ob sie Interesse an dem Angebot haben,
-                              bzw zustimmen, wenn dies der Fall ist, werden alle
-                              wichtigen Informationen an ihre Mitarbeiter
-                              gesendet, mit einer{" "}
-                              <span className="font-bold text-green-500">
-                                {" "}
-                                personalisierte{" "}
-                              </span>{" "}
-                              Aufforderung, damit alle Bescheid wissen was zu
-                              tun ist
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
+          <h2 className="text-center font-bold text-5xl mb-10">
+            Warum AI{" "}
+            <span className="font-bold text-orange-500"> Automatisierung </span>
+          </h2>
 
-            <div className="flex justify-between mb-10   ">
-              <div className="flex ">
-                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl ml-20 relative z-10">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div
-                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                      style={{
-                        animationDuration: "4s",
-                      }}
-                    />
-                    <div
-                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                      style={{
-                        animationDuration: "6s",
-                      }}
-                    />
+          <div className=" mx-auto container flex items-center justify-center ">
+            <Tabs
+              defaultValue="IT"
+              className="w-3/4 bg-slate-900 pt-7 rounded-3xl"
+            >
+              <TabsList className="grid w-full grid-cols-3 gap-5 mb-18 px-3">
+                <TabsTrigger value="IT" className="text-sm p-6 bg-slate-800  ">
+                  <div className="flex justify-between">
+                    <div className="h-12 w-12 bg-red-500/10 rounded-lg flex items-center justify-center mr-5">
+                      <Building2 className="h-6 w-6 text-red-400" />
+                    </div>
+                    <div>
+                      <h2 className="text-white font-bold text-left">
+                        IT Unternehmen,{" "}
+                      </h2>
+                      <p className="text-sm text-gray-300 text-left">
+                        automatisieren Mitarbeiter
+                      </p>
+                    </div>
                   </div>
-                  <img
-                    className="h-[300px] w-[600px] rounded-lg mb-10"
-                    src={"AutoResponder.png"}
-                  ></img>
-                  <Card className="bg-slate-800 border-slate-700">
-                    <CardContent className="">
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
-                          <Workflow className="h-6 w-6 text-orange-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2">
-                            Email Autoresponder
-                          </h3>
-                          <p className="text-sm text-slate-300">
-                            Automatische Email Beantwortung, um keine Kunden zu
-                            verpassen
-                          </p>
-                          <div className="flex justify-between max-w-[400px] mt-5">
-                            <p className="text-sm text-slate-300">
-                              Es funktioniert so, sobald eine Email eintrifft,
-                              wird ein{" "}
-                              <span className="text-orange-500 font-bold">
-                                KI Agent
-                              </span>{" "}
-                              bestimmen, ob die{" "}
-                              <span className="text-orange-500 font-bold">
-                                {" "}
-                                Email{" "}
-                              </span>{" "}
-                              z.B. ein Auftrag animmt, wenn dies der Fall ist
-                              wird eine responding Email gesendet die man
-                              <span className="text-orange-500 font-bold">
-                                {" "}
-                                personalisieren{" "}
-                              </span>{" "}
-                              lassen kann, oder auch nur simple Emails um einen
-                              Termin auszumachen.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-              <div className="flex ">
-                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl mr-20 relative z-10">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div
-                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                      style={{
-                        animationDuration: "4s",
-                      }}
-                    />
-                    <div
-                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                      style={{
-                        animationDuration: "6s",
-                      }}
-                    />
+                </TabsTrigger>
+                <TabsTrigger value="Leads" className="text-sm p-6 bg-slate-800">
+                  <div className="flex justify-between">
+                    <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center mr-5">
+                      <ChartNoAxesCombined className="h-6 w-6 text-green-400" />
+                    </div>
+                    <div>
+                      <h2 className="text-white font-bold text-left">
+                        {" "}
+                        Dienstleiter,
+                      </h2>
+                      <p className="text-sm text-gray-300 text-left">
+                        automatisieren Leads
+                      </p>
+                    </div>
                   </div>
+                </TabsTrigger>
+                <TabsTrigger
+                  value="DevOps"
+                  className="text-sm p-6 bg-slate-800"
+                >
+                  <div className="flex justify-between">
+                    <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center mr-5">
+                      <Instagram className="h-6 w-6 text-blue-400" />
+                    </div>
+                    <div>
+                      <h2 className="text-white font-bold text-left">
+                        Unternehmen,
+                      </h2>
+                      <p className="text-sm text-gray-300 text-left ">
+                        automatisieren Social Media
+                      </p>
+                    </div>
+                  </div>
+                </TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="IT" className="mt-6">
+                <div className="w-full">
                   <img
-                    className="h-[300px] w-[600px] rounded-lg mb-10"
-                    src={"LeadAutomationWorkflow.png"}
-                  ></img>
-                  <Card className="bg-slate-800 border-slate-700">
-                    <CardContent className="">
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                          <User className="h-6 w-6 text-purple-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2">
-                            Ihre Vorstellungen
-                          </h3>
-                          <p className="text-sm text-slate-300">
-                            Gib uns eine Anfrage zum automatisieren, und wir
-                            werden
-                            <span className="line-through  text-red-500 font-bold">
-                              {"  "}
-                              versuchen{"  "}
-                            </span>
-                            es umzusetzen
-                          </p>
-                          <div className="flex justify-between max-w-[400px] mt-5">
-                            <p className="text-sm text-slate-300">
-                              Wir werden eine Automatisierung entwerfen, die zu
-                              <span className="text-purple-500 font-bold">
-                                {" "}
-                                ihrem Unternehmen
-                              </span>{" "}
-                              und zu ihren Wünschen passt, von spezieller Lead
-                              Generation bis hin zu kompletten Automatisierung
-                              von{" "}
-                              <span className="text-purple-500 font-bold">
-                                {" "}
-                                Workflows{" "}
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                    src="/MitarbeiterWorkflowNew.png"
+                    alt="IT Ops automation workflow showing employee onboarding process"
+                    className="w-full h-[60vh] rounded-lg"
+                  />
                 </div>
-              </div>
-            </div>
+              </TabsContent>
+
+              <TabsContent value="Leads" className="mt-6">
+                <div className="w-full">
+                  <img
+                    src="/LeadsWorkflow.png"
+                    alt="Sec Ops workflow for enriching security incident tickets"
+                    className="w-full h-[60vh] rounded-lg"
+                  />
+                </div>
+              </TabsContent>
+
+              <TabsContent value="DevOps" className="mt-6">
+                <div className="w-full">
+                  <img
+                    src="/SocialMediaWorkflow.png"
+                    alt="Dev Ops workflow for converting natural language to API calls"
+                    className="w-full h-[60vh] rounded-lg"
+                  />
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </section>
@@ -1631,4 +1428,261 @@ export default function LandingPage() {
       `}</style>
     </div>
   );
+}
+{
+  /* <div className="flex  relative">
+                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl ml-20 relative z-10">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div
+                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+                      style={{
+                        animationDuration: "4s",
+                      }}
+                    />
+                    <div
+                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
+                      style={{
+                        animationDuration: "6s",
+                      }}
+                    />
+                  </div>
+                  <img
+                    className="h-[450px] w-[700px] rounded-lg mb-10"
+                    src={"LeadAutomationWorkflow.png"}
+                  ></img>
+                  <Card className="bg-slate-800 border-slate-700">
+                    <CardContent className="">
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                          <Mail className="h-6 w-6 text-blue-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2">
+                            Lead Generation
+                          </h3>
+                          <p className="text-sm text-slate-300">
+                            Personalisierte Lead Generation individuell an dein
+                            Unternehmen angepasst
+                          </p>
+                          <div className="flex justify-between max-w-[400px] mt-5">
+                            <p className="text-sm text-slate-300">
+                              Es funktioniert wie folgt, die Unternehmen werden
+                              mit{" "}
+                              <span className="text-blue-500 font-bold">
+                                {" "}
+                                Google Maps
+                              </span>{" "}
+                              rausgesucht, die Emails anschließend von der
+                              Website extrahiert. Der KI Agent nutzt
+                              anschließend die Informationen{" "}
+                              <span className="text-blue-500 font-bold">
+                                {" "}
+                                ihres{" "}
+                              </span>{" "}
+                              Unternehmens und die Informationen von der Website
+                              des potentiellen{" "}
+                              <span className="text-blue-500 font-bold">
+                                Kunden
+                              </span>{" "}
+                              um eine personalisierte einzigartige Email zu
+                              verfassen und abzusenden{" "}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div> */
+}
+{
+  /* <div className="flex ">
+                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl mr-20 relative z-10 ">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div
+                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+                      style={{
+                        animationDuration: "4s",
+                      }}
+                    />
+                    <div
+                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
+                      style={{
+                        animationDuration: "6s",
+                      }}
+                    />
+                  </div>
+                  <img
+                    className="h-[450px] w-[700px] rounded-lg mb-10"
+                    src={"MitarbeiterWorkflow.png"}
+                  ></img>
+                  <Card className="bg-slate-800 border-slate-700">
+                    <CardContent className="">
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                          <UserCheck className="h-6 w-6 text-green-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2">
+                            Mitarbeiter Verteilung
+                          </h3>
+                          <p className="text-sm text-slate-300 max-w-[440px]">
+                            Verteile automatische Aufgaben an{" "}
+                            <span className="text-green-500 font-bold">
+                              {" "}
+                              deine Mitarbeiter{" "}
+                            </span>
+                            , und steigere die Effizienz deines Unternehmens und
+                            spare Zeit
+                          </p>
+                          <div className="flex justify-between max-w-[400px] mt-5">
+                            <p className="text-sm text-slate-300">
+                              Es funktioniert so, sobald ein lead geantwortet
+                              hat, wird der{" "}
+                              <span className="font-bold text-green-500">
+                                {" "}
+                                KI Agent{" "}
+                              </span>{" "}
+                              uns sagen, ob sie Interesse an dem Angebot haben,
+                              bzw zustimmen, wenn dies der Fall ist, werden alle
+                              wichtigen Informationen an ihre Mitarbeiter
+                              gesendet, mit einer{" "}
+                              <span className="font-bold text-green-500">
+                                {" "}
+                                personalisierte{" "}
+                              </span>{" "}
+                              Aufforderung, damit alle Bescheid wissen was zu
+                              tun ist
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div> */
+}
+
+{
+  /* <div className="flex-col bg-slate-900/80 p-10 rounded-2xl ml-20 relative z-10">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div
+                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+                      style={{
+                        animationDuration: "4s",
+                      }}
+                    />
+                    <div
+                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
+                      style={{
+                        animationDuration: "6s",
+                      }}
+                    />
+                  </div>
+                  <img
+                    className="h-[450px] w-[700px] rounded-lg mb-10"
+                    src={"AutoResponder.png"}
+                  ></img>
+                  <Card className="bg-slate-800 border-slate-700">
+                    <CardContent className="">
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
+                          <Workflow className="h-6 w-6 text-orange-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2">
+                            Email Autoresponder
+                          </h3>
+                          <p className="text-sm text-slate-300">
+                            Automatische Email Beantwortung, um keine Kunden zu
+                            verpassen
+                          </p>
+                          <div className="flex justify-between max-w-[400px] mt-5">
+                            <p className="text-sm text-slate-300">
+                              Es funktioniert so, sobald eine Email eintrifft,
+                              wird ein{" "}
+                              <span className="text-orange-500 font-bold">
+                                KI Agent
+                              </span>{" "}
+                              bestimmen, ob die{" "}
+                              <span className="text-orange-500 font-bold">
+                                {" "}
+                                Email{" "}
+                              </span>{" "}
+                              z.B. ein Auftrag animmt, wenn dies der Fall ist
+                              wird eine responding Email gesendet die man
+                              <span className="text-orange-500 font-bold">
+                                {" "}
+                                personalisieren{" "}
+                              </span>{" "}
+                              lassen kann, oder auch nur simple Emails um einen
+                              Termin auszumachen.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div> */
+}
+{
+  /* <div className="flex-col bg-slate-900/80 p-10 rounded-2xl mr-20 relative z-10">
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div
+                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+                      style={{
+                        animationDuration: "4s",
+                      }}
+                    />
+                    <div
+                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
+                      style={{
+                        animationDuration: "6s",
+                      }}
+                    />
+                  </div>
+                  <img
+                    className="h-[450px] w-[700px] rounded-lg mb-10"
+                    src={"LeadAutomationWorkflow.png"}
+                  ></img>
+                  <Card className="bg-slate-800 border-slate-700">
+                    <CardContent className="">
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                          <User className="h-6 w-6 text-purple-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2">
+                            Ihre Vorstellungen
+                          </h3>
+                          <p className="text-sm text-slate-300">
+                            Gib uns eine Anfrage zum automatisieren, und wir
+                            werden
+                            <span className="line-through  text-red-500 font-bold">
+                              {"  "}
+                              versuchen{"  "}
+                            </span>
+                            es umzusetzen
+                          </p>
+                          <div className="flex justify-between max-w-[400px] mt-5">
+                            <p className="text-sm text-slate-300">
+                              Wir werden eine Automatisierung entwerfen, die zu
+                              <span className="text-purple-500 font-bold">
+                                {" "}
+                                ihrem Unternehmen
+                              </span>{" "}
+                              und zu ihren Wünschen passt, von spezieller Lead
+                              Generation bis hin zu kompletten Automatisierung
+                              von{" "}
+                              <span className="text-purple-500 font-bold">
+                                {" "}
+                                Workflows{" "}
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+              </div> */
 }
