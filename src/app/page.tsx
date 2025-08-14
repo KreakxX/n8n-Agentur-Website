@@ -27,6 +27,7 @@ import {
   Network,
   Twitter,
   Youtube,
+  Blocks,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -841,7 +842,7 @@ export default function LandingPage() {
                         <CardContent>
                           <div className="space-y-4">
                             <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-purple-400" />
+                              <Blocks className="h-6 w-6 text-purple-400" />
                             </div>
                             <div>
                               <h3 className="font-semibold text-white mb-2 text-left">
@@ -1204,7 +1205,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h2 className="text-white font-bold text-left">
-                        IT Unternehmen,{" "}
+                        Unternehmen,{" "}
                       </h2>
                       <p className="text-sm text-gray-300 text-left">
                         automatisieren Mitarbeiter
@@ -1224,7 +1225,7 @@ export default function LandingPage() {
                     <div>
                       <h2 className="text-white font-bold text-left">
                         {" "}
-                        Dienstleiter,
+                        Dienstleister,
                       </h2>
                       <p className="text-sm text-gray-300 text-left">
                         automatisieren Leads
