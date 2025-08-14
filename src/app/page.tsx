@@ -132,6 +132,9 @@ export default function LandingPage() {
   const [personalisedEmails, setPersonalizedEmails] = useState<boolean>(false);
   const [standardEmails, setStandardEmails] = useState<boolean>(false);
   const [EmailResponder, setEmailResponder] = useState<boolean>(false);
+  const [MarketingAutomation, setMarketingAutomation] =
+    useState<boolean>(false);
+  const [MobileAgent, setMobileAgent] = useState<boolean>(false);
   const [MitArbeiterVerteilung, setMitArbeiterVerteilung] =
     useState<boolean>(false);
   const [EigeneAnfrage, setEigeneAnfrage] = useState<boolean>(false);
@@ -424,9 +427,11 @@ export default function LandingPage() {
                       setEmailResponder(false);
                       setEigeneAnfrage(false);
                       setMitArbeiterVerteilung(false);
+                      setMarketingAutomation(false);
+                      setMobileAgent(false);
                     }}
-                    className={`p-8 bg-slate-800/50 border-none w-full hover:bg-slate-800 ${
-                      LeadGeneration ? "bg-slate-800" : ""
+                    className={`p-8 bg-slate-800/50 border-none w-full hover:bg-slate-700 ${
+                      LeadGeneration ? "bg-slate-700" : ""
                     } transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
@@ -449,13 +454,17 @@ export default function LandingPage() {
                   <Card
                     onClick={() => {
                       setEmailResponder(!EmailResponder);
+                      setPersonalizedEmails(false);
+                      setStandardEmails(false);
                       setLeadGeneration(false);
                       setEigeneAnfrage(false);
                       setMitArbeiterVerteilung(false);
+                      setMarketingAutomation(false);
+                      setMobileAgent(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none w-full ${
-                      EmailResponder ? "bg-slate-800" : ""
-                    } hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                      EmailResponder ? "bg-slate-700" : ""
+                    } hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
                       <div className="space-y-4">
@@ -480,10 +489,12 @@ export default function LandingPage() {
                       setLeadGeneration(false);
                       setEigeneAnfrage(false);
                       setEmailResponder(false);
+                      setMarketingAutomation(false);
+                      setMobileAgent(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      MitArbeiterVerteilung ? "bg-slate-800" : ""
-                    } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                      MitArbeiterVerteilung ? "bg-slate-700" : ""
+                    } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
                       <div className="space-y-4">
@@ -509,10 +520,12 @@ export default function LandingPage() {
                       setLeadGeneration(false);
                       setEmailResponder(false);
                       setMitArbeiterVerteilung(false);
+                      setMarketingAutomation(false);
+                      setMobileAgent(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      EigeneAnfrage ? "bg-slate-800" : ""
-                    } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                      EigeneAnfrage ? "bg-slate-700" : ""
+                    } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
                       <div className="space-y-4">
@@ -534,14 +547,16 @@ export default function LandingPage() {
 
                   <Card
                     onClick={() => {
-                      setEigeneAnfrage(!EigeneAnfrage);
+                      setMarketingAutomation(!MarketingAutomation);
                       setLeadGeneration(false);
                       setEmailResponder(false);
                       setMitArbeiterVerteilung(false);
+                      setMobileAgent(false);
+                      setEigeneAnfrage(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      EigeneAnfrage ? "bg-slate-800" : ""
-                    } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                      MarketingAutomation ? "bg-slate-700" : ""
+                    } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
                       <div className="space-y-4">
@@ -562,14 +577,16 @@ export default function LandingPage() {
                   </Card>
                   <Card
                     onClick={() => {
-                      setEigeneAnfrage(!EigeneAnfrage);
+                      setMobileAgent(!MobileAgent);
+                      setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
                       setMitArbeiterVerteilung(false);
+                      setMarketingAutomation(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      EigeneAnfrage ? "bg-slate-800" : ""
-                    } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                      MobileAgent ? "bg-slate-700" : ""
+                    } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
                       <div className="space-y-4">
@@ -602,8 +619,8 @@ export default function LandingPage() {
                           setStandardEmails(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          personalisedEmails ? "bg-slate-800" : ""
-                        } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                          personalisedEmails ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
@@ -624,8 +641,8 @@ export default function LandingPage() {
                           setPersonalizedEmails(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          standardEmails ? "bg-slate-800" : ""
-                        } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                          standardEmails ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
@@ -644,51 +661,6 @@ export default function LandingPage() {
                   </div>
                 ) : null}
 
-                {standardEmails || personalisedEmails ? (
-                  <div className="w-full">
-                    <div className="flex justify-center items-center mt-10 animate-bounce ">
-                      <ArrowDown className="text-orange-500"></ArrowDown>
-                    </div>
-
-                    <div className="flex justify-center gap-4 mt-10">
-                      <Card
-                        className={`p-8 bg-slate-800/50 border-none  w-full`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Kontakt Email
-                              </h3>
-                            </div>
-                            <Input className="border-slate-700 text-white"></Input>
-                          </div>
-
-                          <div className="space-y-4 mt-10">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Info className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Zusätzliche Informationen
-                              </h3>
-                            </div>
-                            <Textarea className="border-slate-700 text-white"></Textarea>
-                          </div>
-
-                          <div className="flex justify-center items-center mt-10">
-                            <Button className="p-6 bg-orange-500">
-                              Auftrag bearbeiten
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                ) : null}
                 {EmailResponder ? (
                   <div className="w-full">
                     <div className="flex justify-center items-center mt-10 animate-bounce ">
@@ -702,8 +674,8 @@ export default function LandingPage() {
                           setStandardEmails(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          personalisedEmails ? "bg-slate-800" : ""
-                        } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                          personalisedEmails ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
@@ -724,8 +696,8 @@ export default function LandingPage() {
                           setPersonalizedEmails(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          standardEmails ? "bg-slate-800" : ""
-                        } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                          standardEmails ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
@@ -744,51 +716,6 @@ export default function LandingPage() {
                   </div>
                 ) : null}
 
-                {standardEmails || personalisedEmails ? (
-                  <div className="w-full">
-                    <div className="flex justify-center items-center mt-10 animate-bounce ">
-                      <ArrowDown className="text-orange-500"></ArrowDown>
-                    </div>
-
-                    <div className="flex justify-center gap-4 mt-10">
-                      <Card
-                        className={`p-8 bg-slate-800/50 border-none  w-full`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Kontakt Email
-                              </h3>
-                            </div>
-                            <Input className="border-slate-700 text-white"></Input>
-                          </div>
-
-                          <div className="space-y-4 mt-10">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Info className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Zusätzliche Informationen
-                              </h3>
-                            </div>
-                            <Textarea className="border-slate-700 text-white"></Textarea>
-                          </div>
-
-                          <div className="flex justify-center items-center mt-10">
-                            <Button className="p-6 bg-orange-500">
-                              Auftrag bearbeiten
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                ) : null}
                 {MitArbeiterVerteilung ? (
                   <div className="w-full">
                     <div className="flex justify-center items-center mt-10 animate-bounce ">
@@ -802,8 +729,8 @@ export default function LandingPage() {
                           setStandardEmails(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          personalisedEmails ? "bg-slate-800" : ""
-                        } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                          personalisedEmails ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
@@ -824,8 +751,8 @@ export default function LandingPage() {
                           setPersonalizedEmails(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          standardEmails ? "bg-slate-800" : ""
-                        } w-full hover:bg-slate-800 transition-colors ease-in-out duration-300`}
+                          standardEmails ? "bg-slate-700" : ""
+                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
@@ -844,51 +771,6 @@ export default function LandingPage() {
                   </div>
                 ) : null}
 
-                {standardEmails || personalisedEmails ? (
-                  <div className="w-full">
-                    <div className="flex justify-center items-center mt-10 animate-bounce ">
-                      <ArrowDown className="text-orange-500"></ArrowDown>
-                    </div>
-
-                    <div className="flex justify-center gap-4 mt-10">
-                      <Card
-                        className={`p-8 bg-slate-800/50 border-none  w-full`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Kontakt Email
-                              </h3>
-                            </div>
-                            <Input className="border-slate-700 text-white"></Input>
-                          </div>
-
-                          <div className="space-y-4 mt-10">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Info className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2">
-                                Zusätzliche Informationen
-                              </h3>
-                            </div>
-                            <Textarea className="border-slate-700 text-white"></Textarea>
-                          </div>
-
-                          <div className="flex justify-center items-center mt-10">
-                            <Button className="p-6 bg-orange-500">
-                              Auftrag bearbeiten
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                ) : null}
                 {EigeneAnfrage ? (
                   <div className="w-full">
                     <div className="flex justify-center items-center mt-10 animate-bounce ">
@@ -944,6 +826,7 @@ export default function LandingPage() {
                   </div>
                 ) : null}
 
+                {/* Step 2 */}
                 {standardEmails || personalisedEmails ? (
                   <div className="w-full">
                     <div className="flex justify-center items-center mt-10 animate-bounce ">
