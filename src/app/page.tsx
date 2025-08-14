@@ -70,6 +70,7 @@ import {
   SiGoogledocs,
   SiGoogletasks,
   SiClaude,
+  SiOllama,
 } from "react-icons/si";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -1221,15 +1222,15 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="">
-        <div className="min-h-screen bg-slate-900 flex items-center justify-center p-8">
+      <section className="relative">
+        <div className="min-h-screen  bg-slate-900 flex items-center justify-center p-8 relative z-10">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center lg:justify-start">
               <div className="relative ">
                 <img
                   src="AIOrb.png"
                   alt="Gradient Orb"
-                  className="w-[70%] h-[70%] lg:w-[500px] lg:h-[500px] scale-230 "
+                  className="w-[70%] h-[70%] lg:w-[500px] lg:h-[500px] scale-230 opacity-50 "
                 />
               </div>
             </div>
@@ -1274,6 +1275,9 @@ export default function LandingPage() {
                 </div>
                 <div className="w-16 h-16 rounded-full bg-orange-500/20 flex items-center justify-center">
                   <SiClaude className="w-8 h-8 text-orange-500" />
+                </div>
+                <div className="w-16 h-16 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                  <SiOllama className="w-8 h-8 text-yellow-500" />
                 </div>
               </div>
 
