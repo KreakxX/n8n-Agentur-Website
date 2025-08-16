@@ -217,9 +217,12 @@ export default function LandingPage() {
                     KI-POWERED AUTOMATION
                   </span>
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                  Flexible KI-Workflow-Automatisierung
-                  <span className="text-orange-500"> für technische Teams</span>
+                <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+                  Flexible KI-Workflow-Automatisierungen
+                  <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
+                    {" "}
+                    für alle Unternehmen
+                  </span>
                 </h1>
 
                 <p className="text-lg text-slate-300 max-w-2xl">
@@ -295,9 +298,12 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-slate-950/50 to-slate-950/20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="text-orange-500 font-bold "> Workflows </span>{" "}
-              die ihr Leben erleichtern
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              Workflows
+              <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
+                {" "}
+                die ihr leben erleichtern
+              </span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1173,7 +1179,7 @@ export default function LandingPage() {
           <div className=" mx-auto container flex items-center justify-center ">
             <Tabs
               defaultValue="IT"
-              className="w-3/4 bg-slate-900/30 pt-7 rounded-3xl "
+              className="w-3/4 bg-slate-900 pt-7 rounded-3xl "
             >
               <TabsList className="grid w-full grid-cols-3 gap-5 mb-18 px-3">
                 <TabsTrigger
