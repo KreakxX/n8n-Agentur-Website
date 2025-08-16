@@ -4,22 +4,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
-  Users,
   Zap,
   Workflow,
   Mail,
   UserCheck,
-  User,
   ArrowDown,
   Info,
   FileQuestionMark,
   Building2,
   BrainCog,
-  Scale,
   Expand,
   Instagram,
   Smartphone,
-  ChartArea,
   ChartNoAxesCombined,
   BookCheck,
   CircleDollarSign,
@@ -193,31 +189,12 @@ export default function LandingPage() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
-              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/40 to-purple-500/15 rounded-full blur-3xl "
               style={{
                 animationDuration: "4s",
               }}
             />
-            <div
-              className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-              style={{
-                animationDuration: "6s",
-              }}
-            />
           </div>
-
-          <div
-            className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-            style={{
-              animationDuration: "4s",
-            }}
-          />
-          <div
-            className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-            style={{
-              animationDuration: "6s",
-            }}
-          />
         </div>
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <img
@@ -225,9 +202,9 @@ export default function LandingPage() {
             className="absolute inset-0 w-full h-full opacity-50 pointer-events-none"
             style={{
               maskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 85%, transparent 100%)",
               WebkitMaskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 85%, transparent 100%)",
             }}
           />
         </div>
@@ -254,14 +231,14 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white"
+                  className="bg-orange-500 hover:bg-orange-600 text-white "
                 >
                   Konfigurieren sie ihren Workflow
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/40 to-purple-500/40 blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-pruple-500/50 to-purple-500/30 blur-3xl"></div>
               <div className="relative bg-slate-900/80 rounded-lg p-8 border border-slate-700">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-2">
@@ -310,7 +287,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 relative bg-slate-950/20 h-full w-full overflow-hidden">
+      <section className="pt-20 pb-10 relative bg-slate-950/20 h-full w-full overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-slate-950/50 to-slate-950/20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -322,7 +300,7 @@ export default function LandingPage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 blur-3xl"></div>
 
-              <Card className="bg-slate-800/60 border-slate-700 relative z-10 h-[100%]">
+              <Card className="bg-slate-800/60 border-slate-700 relative z-10 h-[90%]">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
@@ -344,7 +322,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 blur-3xl"></div>
-              <Card className="bg-slate-800/60 border-slate-700 relative z-10">
+              <Card className="bg-slate-800/60 border-slate-700 relative z-10 h-[90%]">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
@@ -366,7 +344,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 blur-3xl"></div>
-              <Card className="bg-slate-800/60 border-slate-700 z-10 relative">
+              <Card className="bg-slate-800/60 border-slate-700 z-10 relative h-[90%]">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
@@ -388,7 +366,7 @@ export default function LandingPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-purple-500/10 blur-3xl"></div>
-              <Card className="bg-slate-800/60 border-slate-700 z-10 relative h-[100%] ">
+              <Card className="bg-slate-800/60 border-slate-700 z-10 relative h-[90%] ">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
@@ -1196,8 +1174,8 @@ export default function LandingPage() {
               <TabsList className="grid w-full grid-cols-3 gap-5 mb-18 px-3">
                 <TabsTrigger
                   value="IT"
-                  className="text-sm p-6 bg-slate-900/40 border-2 border-slate-800  data-[state=active]:bg-orange-800 
-             data-[state=active]:border-orange-600"
+                  className="text-sm p-6 bg-slate-900/40 border-2 border-slate-800  data-[state=active]:bg-orange-900 
+             data-[state=active]:border-orange-900"
                 >
                   <div className="flex justify-between">
                     <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
@@ -1215,8 +1193,8 @@ export default function LandingPage() {
                 </TabsTrigger>
                 <TabsTrigger
                   value="Leads"
-                  className="text-sm p-6 bg-slate-900/40 border-2 border-slate-800 data-[state=active]:bg-orange-800 
-             data-[state=active]:border-orange-600"
+                  className="text-sm p-6 bg-slate-900/40 border-2 border-slate-800  data-[state=active]:bg-orange-900 
+             data-[state=active]:border-orange-900"
                 >
                   <div className="flex justify-between">
                     <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
@@ -1235,8 +1213,8 @@ export default function LandingPage() {
                 </TabsTrigger>
                 <TabsTrigger
                   value="DevOps"
-                  className="text-sm p-6  bg-slate-900/40 border-2 border-slate-800 data-[state=active]:bg-orange-800 
-             data-[state=active]:border-orange-600"
+                  className="text-sm p-6  bg-slate-900/40 border-2 border-slate-800  data-[state=active]:bg-orange-900 
+             data-[state=active]:border-orange-900"
                 >
                   <div className="flex justify-between">
                     <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
@@ -1296,9 +1274,9 @@ export default function LandingPage() {
               className="absolute inset-0 w-full h-full"
               style={{
                 maskImage:
-                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.8) 60%, black 80%)",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, black 50%)",
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.8) 60%, black 80%)",
               }}
             />
           </div>
@@ -1317,7 +1295,6 @@ export default function LandingPage() {
           </div>
           <div className="overflow-hidden mb-8 relative">
             <div className="flex animate-scroll gap-4 whitespace-nowrap">
-              {/* Erste Kopie */}
               {integrations.slice(0, 15).map((iconName, index) => {
                 const IconComponent = iconsMap[iconName];
                 return (
@@ -1388,12 +1365,50 @@ export default function LandingPage() {
         <div className="min-h-screen  bg-slate-900 flex items-center justify-center p-8 relative z-10">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center lg:justify-start">
-              <div className="relative ">
-                <img
-                  src="AIOrb.png"
-                  alt="Gradient Orb"
-                  className="w-[70%] h-[70%] lg:w-[500px] lg:h-[500px] scale-230 opacity-50 "
-                />
+              <div className="relative w-full mr-10">
+                <div className="relative bg-slate-900/80 rounded-lg p-8 border border-slate-700">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center space-x-2">
+                      <Zap className="h-5 w-5 text-orange-500" />
+                      <span className="text-sm font-medium">
+                        Workflow Builder
+                      </span>
+                    </div>
+                    <Badge
+                      variant="secondary"
+                      className="bg-orange-500/10 text-orange-400 border-orange-500/20"
+                    >
+                      Active
+                    </Badge>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
+                      <SiAirtable size={35} className=" text-blue-400" />
+                      <span className="text-sm">Database Trigger</span>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <ArrowDown className="h-6 w-6 text-slate-500" />
+                    </div>
+                    <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
+                      <SiOpenai size={35} className=" text-green-400" />
+                      <span className="text-sm">AI Processing</span>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <ArrowDown className="h-6 w-6 text-slate-500" />
+                    </div>
+                    <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
+                      <SiGmail size={35} className=" text-purple-400" />
+                      <span className="text-sm">Send Email</span>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <ArrowDown className="h-6 w-6 text-slate-500" />
+                    </div>
+                    <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
+                      <UserCheck size={35} className=" text-orange-400" />
+                      <span className="text-sm">Get new Leads</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1668,259 +1683,4 @@ export default function LandingPage() {
   );
 }
 {
-  /* <div className="flex  relative">
-                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl ml-20 relative z-10">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div
-                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                      style={{
-                        animationDuration: "4s",
-                      }}
-                    />
-                    <div
-                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                      style={{
-                        animationDuration: "6s",
-                      }}
-                    />
-                  </div>
-                  <img
-                    className="h-[450px] w-[700px] rounded-lg mb-10"
-                    src={"LeadAutomationWorkflow.png"}
-                  ></img>
-                  <Card className="bg-slate-800 border-slate-700">
-                    <CardContent className="">
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                          <Mail className="h-6 w-6 text-blue-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2">
-                            Lead Generation
-                          </h3>
-                          <p className="text-sm text-slate-300">
-                            Personalisierte Lead Generation individuell an dein
-                            Unternehmen angepasst
-                          </p>
-                          <div className="flex justify-between max-w-[400px] mt-5">
-                            <p className="text-sm text-slate-300">
-                              Es funktioniert wie folgt, die Unternehmen werden
-                              mit{" "}
-                              <span className="text-blue-500 font-bold">
-                                {" "}
-                                Google Maps
-                              </span>{" "}
-                              rausgesucht, die Emails anschließend von der
-                              Website extrahiert. Der KI Agent nutzt
-                              anschließend die Informationen{" "}
-                              <span className="text-blue-500 font-bold">
-                                {" "}
-                                ihres{" "}
-                              </span>{" "}
-                              Unternehmens und die Informationen von der Website
-                              des potentiellen{" "}
-                              <span className="text-blue-500 font-bold">
-                                Kunden
-                              </span>{" "}
-                              um eine personalisierte einzigartige Email zu
-                              verfassen und abzusenden{" "}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div> */
-}
-{
-  /* <div className="flex ">
-                <div className="flex-col bg-slate-900/80 p-10 rounded-2xl mr-20 relative z-10 ">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div
-                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                      style={{
-                        animationDuration: "4s",
-                      }}
-                    />
-                    <div
-                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                      style={{
-                        animationDuration: "6s",
-                      }}
-                    />
-                  </div>
-                  <img
-                    className="h-[450px] w-[700px] rounded-lg mb-10"
-                    src={"MitarbeiterWorkflow.png"}
-                  ></img>
-                  <Card className="bg-slate-800 border-slate-700">
-                    <CardContent className="">
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-green-500/10 rounded-lg flex items-center justify-center">
-                          <UserCheck className="h-6 w-6 text-green-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2">
-                            Mitarbeiter Verteilung
-                          </h3>
-                          <p className="text-sm text-slate-300 max-w-[440px]">
-                            Verteile automatische Aufgaben an{" "}
-                            <span className="text-green-500 font-bold">
-                              {" "}
-                              deine Mitarbeiter{" "}
-                            </span>
-                            , und steigere die Effizienz deines Unternehmens und
-                            spare Zeit
-                          </p>
-                          <div className="flex justify-between max-w-[400px] mt-5">
-                            <p className="text-sm text-slate-300">
-                              Es funktioniert so, sobald ein lead geantwortet
-                              hat, wird der{" "}
-                              <span className="font-bold text-green-500">
-                                {" "}
-                                KI Agent{" "}
-                              </span>{" "}
-                              uns sagen, ob sie Interesse an dem Angebot haben,
-                              bzw zustimmen, wenn dies der Fall ist, werden alle
-                              wichtigen Informationen an ihre Mitarbeiter
-                              gesendet, mit einer{" "}
-                              <span className="font-bold text-green-500">
-                                {" "}
-                                personalisierte{" "}
-                              </span>{" "}
-                              Aufforderung, damit alle Bescheid wissen was zu
-                              tun ist
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div> */
-}
-
-{
-  /* <div className="flex-col bg-slate-900/80 p-10 rounded-2xl ml-20 relative z-10">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div
-                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                      style={{
-                        animationDuration: "4s",
-                      }}
-                    />
-                    <div
-                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                      style={{
-                        animationDuration: "6s",
-                      }}
-                    />
-                  </div>
-                  <img
-                    className="h-[450px] w-[700px] rounded-lg mb-10"
-                    src={"AutoResponder.png"}
-                  ></img>
-                  <Card className="bg-slate-800 border-slate-700">
-                    <CardContent className="">
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
-                          <Workflow className="h-6 w-6 text-orange-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2">
-                            Email Autoresponder
-                          </h3>
-                          <p className="text-sm text-slate-300">
-                            Automatische Email Beantwortung, um keine Kunden zu
-                            verpassen
-                          </p>
-                          <div className="flex justify-between max-w-[400px] mt-5">
-                            <p className="text-sm text-slate-300">
-                              Es funktioniert so, sobald eine Email eintrifft,
-                              wird ein{" "}
-                              <span className="text-orange-500 font-bold">
-                                KI Agent
-                              </span>{" "}
-                              bestimmen, ob die{" "}
-                              <span className="text-orange-500 font-bold">
-                                {" "}
-                                Email{" "}
-                              </span>{" "}
-                              z.B. ein Auftrag animmt, wenn dies der Fall ist
-                              wird eine responding Email gesendet die man
-                              <span className="text-orange-500 font-bold">
-                                {" "}
-                                personalisieren{" "}
-                              </span>{" "}
-                              lassen kann, oder auch nur simple Emails um einen
-                              Termin auszumachen.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div> */
-}
-{
-  /* <div className="flex-col bg-slate-900/80 p-10 rounded-2xl mr-20 relative z-10">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div
-                      className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-                      style={{
-                        animationDuration: "4s",
-                      }}
-                    />
-                    <div
-                      className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-                      style={{
-                        animationDuration: "6s",
-                      }}
-                    />
-                  </div>
-                  <img
-                    className="h-[450px] w-[700px] rounded-lg mb-10"
-                    src={"LeadAutomationWorkflow.png"}
-                  ></img>
-                  <Card className="bg-slate-800 border-slate-700">
-                    <CardContent className="">
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                          <User className="h-6 w-6 text-purple-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2">
-                            Ihre Vorstellungen
-                          </h3>
-                          <p className="text-sm text-slate-300">
-                            Gib uns eine Anfrage zum automatisieren, und wir
-                            werden
-                            <span className="line-through  text-red-500 font-bold">
-                              {"  "}
-                              versuchen{"  "}
-                            </span>
-                            es umzusetzen
-                          </p>
-                          <div className="flex justify-between max-w-[400px] mt-5">
-                            <p className="text-sm text-slate-300">
-                              Wir werden eine Automatisierung entwerfen, die zu
-                              <span className="text-purple-500 font-bold">
-                                {" "}
-                                ihrem Unternehmen
-                              </span>{" "}
-                              und zu ihren Wünschen passt, von spezieller Lead
-                              Generation bis hin zu kompletten Automatisierung
-                              von{" "}
-                              <span className="text-purple-500 font-bold">
-                                {" "}
-                                Workflows{" "}
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-              </div> */
 }
