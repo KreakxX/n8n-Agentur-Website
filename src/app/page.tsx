@@ -157,7 +157,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <nav className="border-b border-slate-800 bg-slate-950/95 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60">
+      <nav className="border-b border-slate-800 bg-slate-transparent backdrop-blur supports-[backdrop-filter]:bg-transparent">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center space-x-8">
@@ -188,14 +188,7 @@ export default function LandingPage() {
 
       <section className="relative overflow-hidden py-20  xl:h-[95vh] sm:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div
-              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/30 to-purple-500/15 rounded-full blur-3xl "
-              style={{
-                animationDuration: "4s",
-              }}
-            />
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-purple-500/5" />
         </div>
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <img
