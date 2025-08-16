@@ -24,6 +24,10 @@ import {
   Twitter,
   Youtube,
   Blocks,
+  Users,
+  Clock,
+  Shield,
+  Star,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -207,6 +211,12 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+                  <span className="text-orange-400 text-sm font-medium tracking-wide">
+                    KI-POWERED AUTOMATION
+                  </span>
+                </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                   Flexible KI-Workflow-Automatisierung
                   <span className="text-orange-500"> für technische Teams</span>
@@ -1460,6 +1470,177 @@ export default function LandingPage() {
                   Workflow Base Konfigurieren
                 </Button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="preise"
+        className="py-24 bg-gradient-to-b from-slate-900 to-slate-950 relative overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,146,60,0.05),transparent_70%)]" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
+              <Users className="w-4 h-4 text-orange-400" />
+              <span className="text-orange-400 text-sm font-medium tracking-wide uppercase">
+                Kundenerfahrungen
+              </span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              Was unsere{" "}
+              <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
+                Kunden sagen
+              </span>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Erfahren Sie, wie Unternehmen mit unseren Automatisierungslösungen
+              Zeit sparen und Effizienz steigern
+            </p>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid md:grid-cols-4 gap-8 mb-20">
+            <div className="text-center">
+              <div className="h-16 w-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-orange-500/20">
+                <Clock className="h-8 w-8 text-orange-400" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">60%</div>
+              <div className="text-slate-300">Zeitersparnis</div>
+            </div>
+            <div className="text-center">
+              <div className="h-16 w-16 bg-green-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-green-500/20">
+                <Users className="h-8 w-8 text-green-400" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">150+</div>
+              <div className="text-slate-300">Zufriedene Kunden</div>
+            </div>
+            <div className="text-center">
+              <div className="h-16 w-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-blue-500/20">
+                <Zap className="h-8 w-8 text-blue-400" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">500+</div>
+              <div className="text-slate-300">Automatisierte Workflows</div>
+            </div>
+            <div className="text-center">
+              <div className="h-16 w-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-purple-500/20">
+                <Shield className="h-8 w-8 text-purple-400" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-slate-300">Verfügbarkeit</div>
+            </div>
+          </div>
+
+          {/* Testimonials */}
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-slate-800/60 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/80 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-slate-300 mb-6 leading-relaxed">
+                  "Young Digitalist hat unsere Lead-Generation komplett
+                  revolutioniert. Wir sparen täglich 4 Stunden und haben 40%
+                  mehr qualifizierte Leads."
+                </p>
+                <div className="flex items-center">
+                  <div className="h-12 w-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                    M
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">Marcus Weber</div>
+                    <div className="text-slate-400 text-sm">
+                      CEO, TechStart GmbH
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800/60 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/80 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-slate-300 mb-6 leading-relaxed">
+                  "Die Social Media Automatisierung ist ein Game-Changer. Unsere
+                  Reichweite hat sich verdreifacht, ohne zusätzlichen Aufwand."
+                </p>
+                <div className="flex items-center">
+                  <div className="h-12 w-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                    S
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">Sarah Klein</div>
+                    <div className="text-slate-400 text-sm">
+                      Marketing Director, CreativeFlow
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800/60 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/80 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-slate-300 mb-6 leading-relaxed">
+                  "Der KI-Telefon-Agent übernimmt 80% unserer Kundenanfragen.
+                  Unser Team kann sich endlich auf strategische Aufgaben
+                  fokussieren."
+                </p>
+                <div className="flex items-center">
+                  <div className="h-12 w-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                    T
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">
+                      Thomas Müller
+                    </div>
+                    <div className="text-slate-400 text-sm">
+                      Geschäftsführer, ServicePro
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-20">
+            <div className="max-w-2xl mx-auto">
+              <h3 className="text-3xl font-bold text-white mb-6">
+                Bereit für Ihre eigene Erfolgsgeschichte?
+              </h3>
+              <p className="text-xl text-slate-300 mb-8">
+                Lassen Sie uns gemeinsam Ihre Workflows optimieren und Ihr
+                Unternehmen automatisieren.
+              </p>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:scale-105"
+              >
+                Kostenloses Beratungsgespräch buchen
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </div>
         </div>
