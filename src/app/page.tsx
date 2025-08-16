@@ -1096,7 +1096,6 @@ export default function LandingPage() {
                           />
                         </div>
 
-                        {/* Additional Information Section */}
                         <div className="space-y-4">
                           <div className="flex items-center gap-4 mb-3">
                             <div className="h-12 w-12 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/20">
@@ -1118,7 +1117,6 @@ export default function LandingPage() {
                           />
                         </div>
 
-                        {/* Submit Button */}
                         <div className="pt-6">
                           <Button className="w-full h-14 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]">
                             <span className="flex items-center gap-2">
@@ -1128,7 +1126,6 @@ export default function LandingPage() {
                           </Button>
                         </div>
 
-                        {/* Footer Note */}
                         <div className="text-center pt-4 border-t border-slate-700/50">
                           <p className="text-slate-500 text-xs">
                             Ihre Daten werden vertraulich behandelt und nur für
@@ -1145,129 +1142,115 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-20 sm:py-32">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div
-              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-              style={{
-                animationDuration: "4s",
-              }}
-            />
-            <div
-              className="absolute top-32 right-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-              style={{
-                animationDuration: "6s",
-              }}
-            />
-          </div>
-
-          <div
-            className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-            style={{
-              animationDuration: "4s",
-            }}
-          />
-          <div
-            className="absolute bottom-32 left-20 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-orange-500/20 rounded-full blur-2xl animate-bounce"
-            style={{
-              animationDuration: "6s",
-            }}
-          />
-        </div>
-        <div className="relative z-10">
-          <div className=" mx-auto container flex items-center justify-center ">
+      <section className="bg-slate-950 py-20 sm:py-32">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center">
             <Tabs
               defaultValue="IT"
-              className="w-3/4 bg-slate-900 pt-7 rounded-3xl "
+              className="w-full max-w-6xl bg-slate-900 rounded-2xl p-6"
             >
-              <TabsList className="grid w-full grid-cols-3 gap-5 mb-18 px-3">
+              <TabsList className="grid w-full grid-cols-4 gap-4 mb-20 bg-transparent ">
                 <TabsTrigger
                   value="IT"
-                  className="text-sm p-6 bg-slate-900/40 border-2 border-slate-800  data-[state=active]:bg-orange-900 
-             data-[state=active]:border-orange-900"
+                  className="flex items-center gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl
+                         data-[state=active]:bg-slate-700 data-[state=active]:border-slate-600
+                         hover:bg-slate-750 transition-colors"
                 >
-                  <div className="flex justify-between">
-                    <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
-                      <Building2 className="h-6 w-6 text-orange-500" />
-                    </div>
-                    <div>
-                      <h2 className="text-white font-bold text-left">
-                        Unternehmen,{" "}
-                      </h2>
-                      <p className="text-sm text-gray-300 text-left">
-                        automatisieren Mitarbeiter
-                      </p>
-                    </div>
+                  <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center">
+                    <Building2 className="h-5 w-5 text-slate-700" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-white font-medium text-sm">
+                      Enterprise
+                    </h3>
+                    <p className="text-slate-400 text-xs">
+                      Employee Automation
+                    </p>
                   </div>
                 </TabsTrigger>
+
                 <TabsTrigger
                   value="Leads"
-                  className="text-sm p-6 bg-slate-900/40 border-2 border-slate-800  data-[state=active]:bg-orange-900 
-             data-[state=active]:border-orange-900"
+                  className="flex items-center gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl
+                         data-[state=active]:bg-slate-700 data-[state=active]:border-slate-600
+                         hover:bg-slate-750 transition-colors"
                 >
-                  <div className="flex justify-between">
-                    <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
-                      <ChartNoAxesCombined className="h-6 w-6 text-orange-500" />
-                    </div>
-                    <div>
-                      <h2 className="text-white font-bold text-left">
-                        {" "}
-                        Dienstleister,
-                      </h2>
-                      <p className="text-sm text-gray-300 text-left">
-                        automatisieren Leads
-                      </p>
-                    </div>
+                  <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center">
+                    <ChartNoAxesCombined className="h-5 w-5 text-slate-700" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-white font-medium text-sm">Services</h3>
+                    <p className="text-slate-400 text-xs">Lead Automation</p>
                   </div>
                 </TabsTrigger>
+
+                <TabsTrigger
+                  value="PersonalAgent"
+                  className="flex items-center gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl
+                         data-[state=active]:bg-slate-700 data-[state=active]:border-slate-600
+                         hover:bg-slate-750 transition-colors"
+                >
+                  <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center">
+                    <ChartNoAxesCombined className="h-5 w-5 text-slate-700" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-white font-medium text-sm">Employee</h3>
+                    <p className="text-slate-400 text-xs">Personal Agent</p>
+                  </div>
+                </TabsTrigger>
+
                 <TabsTrigger
                   value="DevOps"
-                  className="text-sm p-6  bg-slate-900/40 border-2 border-slate-800  data-[state=active]:bg-orange-900 
-             data-[state=active]:border-orange-900"
+                  className="flex items-center gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl
+                         data-[state=active]:bg-slate-700 data-[state=active]:border-slate-600
+                         hover:bg-slate-750 transition-colors"
                 >
-                  <div className="flex justify-between">
-                    <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center mr-5">
-                      <Instagram className="h-6 w-6 text-orange-500" />
-                    </div>
-                    <div>
-                      <h2 className="text-white font-bold text-left">
-                        Unternehmen,
-                      </h2>
-                      <p className="text-sm text-gray-300 text-left ">
-                        automatisieren Social Media
-                      </p>
-                    </div>
+                  <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center">
+                    <Instagram className="h-5 w-5 text-slate-700" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-white font-medium text-sm">Social</h3>
+                    <p className="text-slate-400 text-xs">Media Automation</p>
                   </div>
                 </TabsTrigger>
               </TabsList>
 
-              <TabsContent value="IT" className="mt-6">
-                <div className="w-full">
+              <TabsContent value="IT" className="mt-0">
+                <div className="bg-slate-800 rounded-xl p-1">
                   <img
                     src="/MitarbeiterWorkflowNew.png"
-                    alt="IT Ops automation workflow showing employee onboarding process"
-                    className="w-full h-[60vh] rounded-3xl"
+                    alt="Employee automation workflow"
+                    className="w-full h-[500px] object-cover rounded-lg"
                   />
                 </div>
               </TabsContent>
 
-              <TabsContent value="Leads" className="mt-6">
-                <div className="w-full">
+              <TabsContent value="Leads" className="mt-0">
+                <div className="bg-slate-800 rounded-xl p-1">
                   <img
                     src="/LeadsWorkflow.png"
-                    alt="Sec Ops workflow for enriching security incident tickets"
-                    className="w-full h-[60vh] rounded-3xl"
+                    alt="Lead automation workflow"
+                    className="w-full h-[500px] object-cover rounded-lg"
                   />
                 </div>
               </TabsContent>
 
-              <TabsContent value="DevOps" className="mt-6">
-                <div className="w-full">
+              <TabsContent value="PersonalAgent" className="mt-0">
+                <div className="bg-slate-800 rounded-xl p-1">
                   <img
-                    src="/SocialMediaWorkflow.png"
-                    alt="Dev Ops workflow for converting natural language to API calls"
-                    className="w-full h-[60vh] rounded-3xl"
+                    src="/PersonalAgent.png"
+                    alt="Lead automation workflow"
+                    className="w-full h-[500px] object-cover rounded-lg"
+                  />
+                </div>
+              </TabsContent>
+
+              <TabsContent value="DevOps" className="mt-0">
+                <div className="bg-slate-800 rounded-xl p-1">
+                  <img
+                    src="/SocialMediaAgent.png"
+                    alt="Social media automation workflow"
+                    className="w-full h-[500px] object-cover rounded-lg"
                   />
                 </div>
               </TabsContent>
