@@ -260,21 +260,21 @@ export default function LandingPage() {
                     <span className="text-sm">Database Trigger</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ArrowDown className="h-6 w-6 text-slate-500" />
+                    <ArrowDown className="h-6 w-6 text-orange-500" />
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiOpenai size={35} className=" text-green-400" />
                     <span className="text-sm">AI Processing</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ArrowDown className="h-6 w-6 text-slate-500" />
+                    <ArrowDown className="h-6 w-6 text-orange-500" />
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiGmail size={35} className=" text-purple-400" />
                     <span className="text-sm">Send Email</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ArrowDown className="h-6 w-6 text-slate-500" />
+                    <ArrowDown className="h-6 w-6 text-orange-500" />
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <UserCheck size={35} className=" text-orange-400" />
@@ -1237,7 +1237,7 @@ export default function LandingPage() {
                   <img
                     src="/MitarbeiterWorkflowNew.png"
                     alt="IT Ops automation workflow showing employee onboarding process"
-                    className="w-full h-[60vh] rounded-lg"
+                    className="w-full h-[60vh] rounded-3xl"
                   />
                 </div>
               </TabsContent>
@@ -1247,7 +1247,7 @@ export default function LandingPage() {
                   <img
                     src="/LeadsWorkflow.png"
                     alt="Sec Ops workflow for enriching security incident tickets"
-                    className="w-full h-[60vh] rounded-lg"
+                    className="w-full h-[60vh] rounded-3xl"
                   />
                 </div>
               </TabsContent>
@@ -1257,7 +1257,7 @@ export default function LandingPage() {
                   <img
                     src="/SocialMediaWorkflow.png"
                     alt="Dev Ops workflow for converting natural language to API calls"
-                    className="w-full h-[60vh] rounded-lg"
+                    className="w-full h-[60vh] rounded-3xl"
                   />
                 </div>
               </TabsContent>
@@ -1383,29 +1383,29 @@ export default function LandingPage() {
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
-                      <SiAirtable size={35} className=" text-blue-400" />
-                      <span className="text-sm">Database Trigger</span>
+                      <SiWhatsapp size={35} className=" text-green-400" />
+                      <span className="text-sm">Whatsapp trigger</span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <ArrowDown className="h-6 w-6 text-slate-500" />
+                      <ArrowDown className="h-6 w-6 text-orange-500" />
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
-                      <SiOpenai size={35} className=" text-green-400" />
+                      <SiClaude size={35} className=" text-orange-400" />
                       <span className="text-sm">AI Processing</span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <ArrowDown className="h-6 w-6 text-slate-500" />
+                      <ArrowDown className="h-6 w-6 text-orange-500" />
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
-                      <SiGmail size={35} className=" text-purple-400" />
+                      <SiGooglecalendar size={35} className=" text-blue-400" />
                       <span className="text-sm">Send Email</span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <ArrowDown className="h-6 w-6 text-slate-500" />
+                      <ArrowDown className="h-6 w-6 text-orange-500" />
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
-                      <UserCheck size={35} className=" text-orange-400" />
-                      <span className="text-sm">Get new Leads</span>
+                      <UserCheck size={35} className=" text-purple-400" />
+                      <span className="text-sm">Create new Calendar event</span>
                     </div>
                   </div>
                 </div>
