@@ -193,18 +193,18 @@ export default function LandingPage() {
       <section className="relative overflow-hidden py-20  xl:h-[95vh] sm:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-purple-500/5" />
-        </div>
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img
-            src="BackgroundProjects5.png"
-            className="absolute inset-0 w-full h-full opacity-50 pointer-events-none"
-            style={{
-              maskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 93%, transparent 100%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 85%, transparent 100%)",
-            }}
-          />
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            <img
+              src="BackgroundProjects5.png"
+              className="absolute inset-0 w-full h-full opacity-50 pointer-events-none"
+              style={{
+                maskImage:
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 93%, transparent 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 85%, transparent 100%)",
+              }}
+            />
+          </div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -1173,7 +1173,7 @@ export default function LandingPage() {
           <div className=" mx-auto container flex items-center justify-center ">
             <Tabs
               defaultValue="IT"
-              className="w-3/4 bg-slate-900 pt-7 rounded-3xl border-2 border-slate-700"
+              className="w-3/4 bg-slate-900/30 pt-7 rounded-3xl "
             >
               <TabsList className="grid w-full grid-cols-3 gap-5 mb-18 px-3">
                 <TabsTrigger
