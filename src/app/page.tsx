@@ -189,7 +189,7 @@ export default function LandingPage() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
-              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/40 to-purple-500/15 rounded-full blur-3xl "
+              className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/30 to-purple-500/15 rounded-full blur-3xl "
               style={{
                 animationDuration: "4s",
               }}
@@ -202,7 +202,7 @@ export default function LandingPage() {
             className="absolute inset-0 w-full h-full opacity-50 pointer-events-none"
             style={{
               maskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 85%, transparent 100%)",
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 93%, transparent 100%)",
               WebkitMaskImage:
                 "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.3) 85%, transparent 100%)",
             }}
