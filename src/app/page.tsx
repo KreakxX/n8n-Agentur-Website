@@ -76,6 +76,7 @@ import {
   SiOllama,
   SiInstagram,
   SiYoutube,
+  SiGoogle,
 } from "react-icons/si";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -244,7 +245,7 @@ export default function LandingPage() {
                   <div className="flex items-center space-x-2">
                     <Zap className="h-5 w-5 text-orange-500" />
                     <span className="text-sm font-medium">
-                      Workflow Builder
+                      Leads Generation
                     </span>
                   </div>
                   <Badge
@@ -257,28 +258,28 @@ export default function LandingPage() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiAirtable size={35} className=" text-blue-400" />
-                    <span className="text-sm">Database Trigger</span>
+                    <span className="text-sm">Airtable trigger</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ArrowDown className="h-6 w-6 text-orange-500" />
+                    <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiOpenai size={35} className=" text-green-400" />
                     <span className="text-sm">AI Processing</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ArrowDown className="h-6 w-6 text-orange-500" />
+                    <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <SiGmail size={35} className=" text-purple-400" />
-                    <span className="text-sm">Send Email</span>
+                    <span className="text-sm">Email verschicken</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ArrowDown className="h-6 w-6 text-orange-500" />
+                    <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                     <UserCheck size={35} className=" text-orange-400" />
-                    <span className="text-sm">Get new Leads</span>
+                    <span className="text-sm">Generiere neue leads</span>
                   </div>
                 </div>
               </div>
@@ -1281,7 +1282,7 @@ export default function LandingPage() {
             />
           </div>
         </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="relative">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 ">
               <span className="text-orange-500">
@@ -1371,7 +1372,7 @@ export default function LandingPage() {
                     <div className="flex items-center space-x-2">
                       <Zap className="h-5 w-5 text-orange-500" />
                       <span className="text-sm font-medium">
-                        Workflow Builder
+                        Personal Agent
                       </span>
                     </div>
                     <Badge
@@ -1387,25 +1388,25 @@ export default function LandingPage() {
                       <span className="text-sm">Whatsapp trigger</span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <ArrowDown className="h-6 w-6 text-orange-500" />
+                      <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                       <SiClaude size={35} className=" text-orange-400" />
                       <span className="text-sm">AI Processing</span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <ArrowDown className="h-6 w-6 text-orange-500" />
+                      <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
                       <SiGooglecalendar size={35} className=" text-blue-400" />
-                      <span className="text-sm">Send Email</span>
+                      <span className="text-sm">Kalendar Eintrag</span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <ArrowDown className="h-6 w-6 text-orange-500" />
+                      <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
-                      <UserCheck size={35} className=" text-purple-400" />
-                      <span className="text-sm">Create new Calendar event</span>
+                      <SiGmail size={35} className=" text-red-400" />
+                      <span className="text-sm">Email verschicken</span>
                     </div>
                   </div>
                 </div>
