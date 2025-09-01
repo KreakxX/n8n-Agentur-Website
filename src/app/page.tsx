@@ -191,9 +191,9 @@ export default function LandingPage() {
       </nav>
 
       <section className="relative overflow-hidden py-20  xl:h-[95vh] sm:py-32">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none ">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-purple-500/5" />
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
+          <div className="absolute inset-0 w-full h-full pointer-events-none ">
             <img
               src="BackgroundProjects5.png"
               className="absolute inset-0 w-full h-full opacity-50 pointer-events-none"
@@ -207,17 +207,17 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto relative ">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full">
+                <div className="inline-flex  items-center gap-2 px-4 py-3 bg-orange-500/10 border border-orange-500/20 rounded-full">
                   <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
                   <span className="text-orange-400 text-sm font-medium tracking-wide">
                     KI-POWERED AUTOMATION
                   </span>
                 </div>
-                <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+                <h1 className="text-5xl sm:text-7xl font-bold mb-6 mt-2 ">
                   Flexible KI-Workflow-Automatisierungen
                   <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
                     {" "}
@@ -238,7 +238,7 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white "
+                  className="bg-orange-500 hover:bg-orange-600 text-white p-7 text-xl"
                 >
                   Konfigurieren sie ihren Workflow
                 </Button>
@@ -262,30 +262,30 @@ export default function LandingPage() {
                   </Badge>
                 </div>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
+                  <div className="flex items-center space-x-3 p-7 bg-slate-800/50 rounded border border-slate-600">
                     <SiAirtable size={35} className=" text-blue-400" />
-                    <span className="text-sm">Airtable trigger</span>
+                    <span className="text-lg">Airtable trigger</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
+                  <div className="flex items-center space-x-3 p-7 bg-slate-800/50 rounded border border-slate-600">
                     <SiOpenai size={35} className=" text-green-400" />
-                    <span className="text-sm">AI Processing</span>
+                    <span className="text-lg">AI Processing</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
+                  <div className="flex items-center space-x-3 p-7 bg-slate-800/50 rounded border border-slate-600">
                     <SiGmail size={35} className=" text-purple-400" />
-                    <span className="text-sm">Email verschicken</span>
+                    <span className="text-lg">Email verschicken</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded border border-slate-600">
+                  <div className="flex items-center space-x-3 p-7 bg-slate-800/50 rounded border border-slate-600">
                     <UserCheck size={35} className=" text-orange-400" />
-                    <span className="text-sm">Generiere neue leads</span>
+                    <span className="text-lg">Generiere neue leads</span>
                   </div>
                 </div>
               </div>
