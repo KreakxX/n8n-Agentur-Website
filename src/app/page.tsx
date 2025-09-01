@@ -217,7 +217,7 @@ export default function LandingPage() {
                     KI-POWERED AUTOMATION
                   </span>
                 </div>
-                <h1 className="text-5xl sm:text-7xl font-bold mb-6 mt-2 ">
+                <h1 className="text-5xl sm:text-6xl font-bold mb-6 mt-2 ">
                   Flexible KI-Workflow-Automatisierungen
                   <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text">
                     {" "}
@@ -424,7 +424,7 @@ export default function LandingPage() {
             </div>
 
             <div className="relative">
-              <div className="mt-16  opacity-50">
+              <div className="mt-16  opacity-80">
                 <div className="grid grid-cols-3 gap-4 w-full mt-10">
                   <Card
                     onClick={() => {
@@ -1142,7 +1142,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-slate-950 py-20 sm:py-32">
+      <section className="bg-slate-900/50 py-20 sm:py-32">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center">
             <Tabs
@@ -1260,6 +1260,7 @@ export default function LandingPage() {
       </section>
 
       <section className="pt-10 pb-20 bg-slate-900/50">
+               
         <div className="relative">
           <div className="absolute inset-0 w-full h-full">
             <img
