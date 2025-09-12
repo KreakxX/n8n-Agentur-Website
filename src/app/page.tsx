@@ -166,8 +166,8 @@ export default function LandingPage() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center space-x-8">
               <div className="flex items-center space-x-2">
-                <div className="h-8 w-8 rounded bg-orange-500 flex items-center justify-center">
-                  <Workflow className="h-5 w-5 text-white" />
+                <div className="h-12 w-13 rounded bg-black flex items-center justify-center">
+                  <img src="Logo.png" className="h-10 w-11" alt="" />
                 </div>
                 <span className="text-xl font-bold">Young Digitalist</span>
               </div>
@@ -1260,7 +1260,6 @@ export default function LandingPage() {
       </section>
 
       <section className="pt-10 pb-20 bg-slate-900/50">
-               
         <div className="relative">
           <div className="absolute inset-0 w-full h-full">
             <img
