@@ -212,9 +212,9 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="container mx-auto relative ">
+        <div className="container mx-auto relative  ">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8 mb-20">
               <div className="space-y-4">
                 <div className="inline-flex  items-center gap-2 px-4 py-3 bg-orange-500/10 border border-orange-500/20 rounded-full">
                   <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
