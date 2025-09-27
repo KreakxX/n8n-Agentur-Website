@@ -31,6 +31,8 @@ import {
   Sigma,
   Table,
   User,
+  Bot,
+  User2,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -85,6 +87,7 @@ import {
   SiYoutube,
   SiGoogle,
   SiExcalidraw,
+  SiHttpie,
 } from "react-icons/si";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -149,12 +152,12 @@ export default function LandingPage() {
   const [MarketingAutomation, setMarketingAutomation] =
     useState<boolean>(false);
   const [MobileAgent, setMobileAgent] = useState<boolean>(false);
-  const [MitArbeiterVerteilung, setMitArbeiterVerteilung] =
+  const [kaltAquiseEmailWriter, setKaltAquiseEmailWriter] =
     useState<boolean>(false);
-  const [Gmaildistribution, setGmailDistribution] = useState<boolean>(false);
-  const [IntegrationDistribution, setIntegrationDistribution] =
-    useState<boolean>(false);
-
+  const [excelGenerator, setExcelGenerator] = useState<boolean>(false);
+  const [chatBot, setChatBot] = useState<boolean>(false);
+  const [singleChatBot, setSingleChatBot] = useState<boolean>(false);
+  const [teamChatBotm, setTeanChatBot] = useState<boolean>(false);
   const [oneSocial, setOneSocial] = useState<boolean>(false);
   const [fourSocial, setFourSocial] = useState<boolean>(false);
 
@@ -170,8 +173,8 @@ export default function LandingPage() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center space-x-8">
               <div className="flex items-center space-x-2">
-                <div className="h-12 w-13 rounded bg-black flex items-center justify-center">
-                  <img src="Logo.png" className="h-10 w-11" alt="" />
+                <div className="h-10 w-10 rounded bg-orange-500 flex items-center justify-center">
+                  <Workflow></Workflow>
                 </div>
                 <span className="text-xl font-bold">Young Digitalist</span>
               </div>
@@ -181,12 +184,6 @@ export default function LandingPage() {
                   className="text-slate-300 hover:text-white transition-colors"
                 >
                   Konfigurator
-                </a>
-                <a
-                  href="#"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Preise
                 </a>
               </div>
             </div>
@@ -254,9 +251,7 @@ export default function LandingPage() {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-2">
                     <Zap className="h-5 w-5 text-orange-500" />
-                    <span className="text-sm font-medium">
-                      Leads Generation
-                    </span>
+                    <span className="text-sm font-medium">Email Responder</span>
                   </div>
                   <Badge
                     variant="secondary"
@@ -267,8 +262,8 @@ export default function LandingPage() {
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 p-7 bg-slate-800/50 rounded border border-slate-600">
-                    <SiAirtable size={35} className=" text-blue-400" />
-                    <span className="text-lg">Airtable trigger</span>
+                    <SiGooglesheets size={35} className=" text-blue-400" />
+                    <span className="text-lg">Google Sheets trigger</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
@@ -281,15 +276,15 @@ export default function LandingPage() {
                     <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                   </div>
                   <div className="flex items-center space-x-3 p-7 bg-slate-800/50 rounded border border-slate-600">
-                    <SiGmail size={35} className=" text-purple-400" />
-                    <span className="text-lg">Email verschicken</span>
+                    <SiOpenai size={35} className=" text-purple-400" />
+                    <span className="text-lg">Web Scraping</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <ArrowDown className="h-6 w-6 text-orange-500 animate-bounce" />
                   </div>
                   <div className="flex items-center space-x-3 p-7 bg-slate-800/50 rounded border border-slate-600">
-                    <UserCheck size={35} className=" text-orange-400" />
-                    <span className="text-lg">Generiere neue leads</span>
+                    <SiGmail size={35} className=" text-orange-400" />
+                    <span className="text-lg">Personalisierte Email</span>
                   </div>
                 </div>
               </div>
@@ -437,7 +432,7 @@ export default function LandingPage() {
                       setStandardEmails(false);
                       setLeadGeneration(false);
                       setEigeneAnfrage(false);
-                      setMitArbeiterVerteilung(false);
+                      setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
                       setMobileAgent(false);
                     }}
@@ -468,7 +463,7 @@ export default function LandingPage() {
                       setEigeneAnfrage(!EigeneAnfrage);
                       setLeadGeneration(false);
                       setEmailResponder(false);
-                      setMitArbeiterVerteilung(false);
+                      setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
                       setMobileAgent(false);
                     }}
@@ -495,15 +490,15 @@ export default function LandingPage() {
                   </Card>
                   <Card
                     onClick={() => {
-                      setMobileAgent(!MobileAgent);
+                      setMobileAgent(false);
                       setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
-                      setMitArbeiterVerteilung(false);
+                      setKaltAquiseEmailWriter(!kaltAquiseEmailWriter);
                       setMarketingAutomation(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      MobileAgent ? "bg-slate-700" : ""
+                      kaltAquiseEmailWriter ? "bg-slate-700" : ""
                     } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
@@ -525,15 +520,15 @@ export default function LandingPage() {
 
                   <Card
                     onClick={() => {
-                      setMobileAgent(!MobileAgent);
+                      setExcelGenerator(!excelGenerator);
                       setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
-                      setMitArbeiterVerteilung(false);
+                      setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      MobileAgent ? "bg-slate-700" : ""
+                      excelGenerator ? "bg-slate-700" : ""
                     } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
@@ -555,15 +550,15 @@ export default function LandingPage() {
 
                   <Card
                     onClick={() => {
-                      setMobileAgent(!MobileAgent);
+                      setChatBot(!chatBot);
                       setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
-                      setMitArbeiterVerteilung(false);
+                      setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      MobileAgent ? "bg-slate-700" : ""
+                      chatBot ? "bg-slate-700" : ""
                     } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
@@ -585,11 +580,40 @@ export default function LandingPage() {
 
                   <Card
                     onClick={() => {
+                      setEigeneAnfrage(false);
+                      setLeadGeneration(false);
+                      setEmailResponder(false);
+                      setKaltAquiseEmailWriter(false);
+                      setMarketingAutomation(false);
+                    }}
+                    className={`p-8 bg-slate-800/50 border-none ${
+                      LeadGeneration ? "bg-slate-700" : ""
+                    } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
+                  >
+                    <CardContent>
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-zinc-500/10 rounded-lg flex items-center justify-center">
+                          <Bot className="h-6 w-6 text-zinc-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2 text-left">
+                            Personal Assisten für Teams
+                          </h3>
+                          <p className="text-sm text-left">
+                            virtuelle Sekretärin für alle deine Mitarbeiter
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card
+                    onClick={() => {
                       setMobileAgent(!MobileAgent);
                       setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
-                      setMitArbeiterVerteilung(false);
+                      setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
@@ -614,87 +638,6 @@ export default function LandingPage() {
                     </CardContent>
                   </Card>
                 </div>
-                {LeadGeneration ? (
-                  <div className="w-full">
-                    <div className="flex justify-center items-center mt-10 animate-bounce ">
-                      <ArrowDown className="text-orange-500"></ArrowDown>
-                    </div>
-
-                    <div className="flex justify-between gap-4 mt-10">
-                      <Card
-                        onClick={() => {
-                          setPersonalizedEmails(!personalisedEmails);
-                          setStandardEmails(false);
-                        }}
-                        className={`p-8 bg-slate-800/50 border-none ${
-                          personalisedEmails ? "bg-slate-700" : ""
-                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2 text-left">
-                                Personalisierte Emails
-                              </h3>
-                              <p className="text-sm text-gray-400 text-left">
-                                Durch KI Recherche, und einem Email Template,
-                                entsteht eine seriöse personalisierte Email
-                              </p>
-                              <h2 className="text-left font-semibold  mt-2">
-                                Vorteile:
-                              </h2>
-                              <div className="flex items-center gap-4 mt-2 ">
-                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                  <BookCheck className="w-6 h-6 text-green-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                                  <ChartNoAxesCombined className="w-6 h-6 text-blue-500" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                      <Card
-                        onClick={() => {
-                          setStandardEmails(!standardEmails);
-                          setPersonalizedEmails(false);
-                        }}
-                        className={`p-8 bg-slate-800/50 border-none ${
-                          standardEmails ? "bg-slate-700" : ""
-                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                              <Mail className="h-6 w-6 text-purple-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2 text-left">
-                                Standard Emails
-                              </h3>
-                              <p className="text-sm text-gray-400 text-left">
-                                Standard Emails basierend auf einem vorgegebenen
-                                Template
-                              </p>
-                              <h2 className="text-left font-semibold  mt-2">
-                                Vorteile:
-                              </h2>
-                              <div className="flex items-center gap-4 mt-2 ">
-                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                ) : null}
 
                 {EmailResponder ? (
                   <div className="w-full">
@@ -778,7 +721,7 @@ export default function LandingPage() {
                   </div>
                 ) : null}
 
-                {MitArbeiterVerteilung ? (
+                {chatBot ? (
                   <div className="w-full">
                     <div className="flex justify-center items-center mt-10 animate-bounce ">
                       <ArrowDown className="text-orange-500"></ArrowDown>
@@ -787,32 +730,34 @@ export default function LandingPage() {
                     <div className="flex justify-between gap-4 mt-10">
                       <Card
                         onClick={() => {
-                          setGmailDistribution(!Gmaildistribution);
-                          setIntegrationDistribution(false);
+                          setTeanChatBot(!teamChatBotm);
+                          setSingleChatBot(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          Gmaildistribution ? "bg-slate-700" : ""
+                          teamChatBotm ? "bg-slate-700" : ""
                         } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
                             <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Network className="h-6 w-6 text-blue-400" />
+                              <User2 className="h-6 w-6 text-blue-400" />
                             </div>
                             <div>
                               <h3 className="font-semibold text-white mb-2 text-left">
-                                Verteilung mit Gmail
+                                Bots for full Teams
                               </h3>
                               <p className="text-sm text-gray-400 text-left">
-                                Automatischer Versand einer Email mit allen
-                                wichtigen Informationen an all deine Mitarbeiter
+                                Personal Assistent Bots for Teams
                               </p>
                               <h2 className="text-left font-semibold  mt-2">
                                 Vorteile:
                               </h2>
                               <div className="flex items-center gap-4 mt-2 ">
                                 <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
+                                  <User className="w-6 h-6 text-green-500" />
+                                </div>
+                                <div className="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center">
+                                  <Workflow className="w-6 h-6 text-orange-500" />
                                 </div>
                               </div>
                             </div>
@@ -821,25 +766,24 @@ export default function LandingPage() {
                       </Card>
                       <Card
                         onClick={() => {
-                          setGmailDistribution(false);
-                          setIntegrationDistribution(!IntegrationDistribution);
+                          setSingleChatBot(!singleChatBot);
+                          setTeanChatBot(false);
                         }}
                         className={`p-8 bg-slate-800/50 border-none ${
-                          IntegrationDistribution ? "bg-slate-700" : ""
+                          singleChatBot ? "bg-slate-700" : ""
                         } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                       >
                         <CardContent>
                           <div className="space-y-4">
                             <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                              <Blocks className="h-6 w-6 text-purple-400" />
+                              <User className="h-6 w-6 text-purple-400" />
                             </div>
                             <div>
                               <h3 className="font-semibold text-white mb-2 text-left">
-                                Verteilung über Integrations
+                                Single Bots
                               </h3>
                               <p className="text-sm text-gray-400 text-left">
-                                Automatische Verteilung von Aufgaben mit Tools
-                                wie Monday.com oder SLACK
+                                Personalisierte Assisten Bots für Mitarbeiter
                               </p>
 
                               <h2 className="text-left font-semibold  mt-2">
@@ -847,19 +791,7 @@ export default function LandingPage() {
                               </h2>
                               <div className="flex items-center gap-4 mt-2 ">
                                 <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                  <SiSlack className="w-6 h-6 text-green-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                                  <SiTrello className="w-6 h-6 text-blue-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                                  <SiJira className="w-6 h-6 text-yellow-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
-                                  <SiHubspot className="w-6 h-6 text-red-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
-                                  <Zap className="w-6 h-6 text-purple-500" />
+                                  <User className="w-6 h-6 text-green-500" />
                                 </div>
                               </div>
                             </div>
@@ -870,189 +802,15 @@ export default function LandingPage() {
                   </div>
                 ) : null}
 
-                {MarketingAutomation ? (
-                  <div className="w-full">
-                    <div className="flex justify-center items-center mt-10 animate-bounce ">
-                      <ArrowDown className="text-orange-500"></ArrowDown>
-                    </div>
-
-                    <div className="flex justify-between gap-4 mt-10">
-                      <Card
-                        onClick={() => {
-                          setOneSocial(!Gmaildistribution);
-                          setFourSocial(false);
-                        }}
-                        className={`p-8 bg-slate-800/50 border-none ${
-                          oneSocial ? "bg-slate-700" : ""
-                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Twitter className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2 text-left">
-                                1 Social Media
-                              </h3>
-                              <p className="text-sm text-gray-400 text-left">
-                                Automatische Post auf einem Social Media ihrer
-                                Wahl
-                              </p>
-                              <h2 className="text-left font-semibold  mt-2">
-                                Vorteile:
-                              </h2>
-                              <div className="flex items-center gap-4 mt-2 ">
-                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                      <Card
-                        onClick={() => {
-                          setOneSocial(false);
-                          setFourSocial(!fourSocial);
-                        }}
-                        className={`p-8 bg-slate-800/50 border-none ${
-                          fourSocial ? "bg-slate-700" : ""
-                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                              <Youtube className="h-6 w-6 text-purple-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2 text-left">
-                                Social King
-                              </h3>
-                              <p className="text-sm text-gray-400 text-left">
-                                Automatische Post auf bis zu 4 sozialen Medien
-                              </p>
-
-                              <h2 className="text-left font-semibold  mt-2">
-                                Vorteile:
-                              </h2>
-                              <div className="flex items-center gap-4 mt-2 ">
-                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                  <SiX className="w-6 h-6 text-green-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                                  <SiInstagram className="w-6 h-6 text-blue-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                                  <SiYoutube className="w-6 h-6 text-yellow-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
-                                  <SiLinkedin className="w-6 h-6 text-red-500" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                ) : null}
-
-                {MobileAgent ? (
-                  <div className="w-full">
-                    <div className="flex justify-center items-center mt-10 animate-bounce ">
-                      <ArrowDown className="text-orange-500"></ArrowDown>
-                    </div>
-
-                    <div className="flex justify-between gap-4 mt-10">
-                      <Card
-                        onClick={() => {
-                          setSupport(!support);
-                          setAllInOne(false);
-                        }}
-                        className={`p-8 bg-slate-800/50 border-none ${
-                          support ? "bg-slate-700" : ""
-                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                              <Smartphone className="h-6 w-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2 text-left">
-                                Kundensupport
-                              </h3>
-                              <p className="text-sm text-gray-400 text-left">
-                                Automatischer KI Telefon Agent für ihren
-                                Kundensupport
-                              </p>
-                              <h2 className="text-left font-semibold  mt-2">
-                                Vorteile:
-                              </h2>
-                              <div className="flex items-center gap-4 mt-2 ">
-                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                  <CircleDollarSign className="w-6 h-6 text-green-500" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                      <Card
-                        onClick={() => {
-                          setSupport(false);
-                          setAllInOne(!allinOne);
-                        }}
-                        className={`p-8 bg-slate-800/50 border-none ${
-                          allinOne ? "bg-slate-700" : ""
-                        } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
-                      >
-                        <CardContent>
-                          <div className="space-y-4">
-                            <div className="h-12 w-12 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                              <SiGooglecalendar className="h-6 w-6 text-purple-400" />
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-white mb-2 text-left">
-                                All in One
-                              </h3>
-                              <p className="text-sm text-gray-400 text-left">
-                                Automatischer KI Telefon Agent, an ihre
-                                Forderungen angepasst
-                              </p>
-
-                              <h2 className="text-left font-semibold  mt-2">
-                                Vorteile:
-                              </h2>
-                              <div className="flex items-center gap-4 mt-2 ">
-                                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
-                                  <SiGooglecalendar className="w-6 h-6 text-green-500" />
-                                </div>
-
-                                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                                  <SiWhatsapp className="w-6 h-6 text-blue-500" />
-                                </div>
-                                <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                                  <SiTelegram className="w-6 h-6 text-yellow-500" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                ) : null}
-
-                {/* Step 2 */}
                 {standardEmails ||
                 personalisedEmails ||
                 EigeneAnfrage ||
-                IntegrationDistribution ||
-                Gmaildistribution ||
+                kaltAquiseEmailWriter ||
                 fourSocial ||
                 oneSocial ||
+                excelGenerator ||
+                singleChatBot ||
+                teamChatBotm ||
                 allinOne ||
                 support ? (
                   <div className="w-full max-w-2xl mx-auto">
