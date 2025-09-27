@@ -160,7 +160,7 @@ export default function LandingPage() {
   const [teamChatBotm, setTeanChatBot] = useState<boolean>(false);
   const [oneSocial, setOneSocial] = useState<boolean>(false);
   const [fourSocial, setFourSocial] = useState<boolean>(false);
-
+  const [cloneChatBot, setCloneChatBot] = useState<boolean>(false);
   const [support, setSupport] = useState<boolean>(false);
   const [allinOne, setAllInOne] = useState<boolean>(false);
 
@@ -550,15 +550,15 @@ export default function LandingPage() {
 
                   <Card
                     onClick={() => {
-                      setChatBot(!chatBot);
                       setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
                       setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
+                      setCloneChatBot(!cloneChatBot);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      chatBot ? "bg-slate-700" : ""
+                      cloneChatBot ? "bg-slate-700" : ""
                     } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
@@ -580,6 +580,8 @@ export default function LandingPage() {
 
                   <Card
                     onClick={() => {
+                      setChatBot(!chatBot);
+
                       setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
@@ -587,7 +589,7 @@ export default function LandingPage() {
                       setMarketingAutomation(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      LeadGeneration ? "bg-slate-700" : ""
+                      chatBot ? "bg-slate-700" : ""
                     } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
@@ -812,6 +814,8 @@ export default function LandingPage() {
                 singleChatBot ||
                 teamChatBotm ||
                 allinOne ||
+                cloneChatBot ||
+                MobileAgent ||
                 support ? (
                   <div className="w-full max-w-2xl mx-auto">
                     <div className="flex justify-center items-center mt-16 mb-12">
@@ -822,7 +826,6 @@ export default function LandingPage() {
 
                     <Card className="bg-slate-800/60 border-slate-700/50 backdrop-blur-sm shadow-2xl">
                       <CardContent className="p-8 space-y-8">
-                        {/* Header Section */}
                         <div className="text-center mb-8">
                           <h2 className="text-2xl font-bold text-white mb-2">
                             Kontaktinformationen
