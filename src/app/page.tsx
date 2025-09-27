@@ -28,6 +28,9 @@ import {
   Clock,
   Shield,
   Star,
+  Sigma,
+  Table,
+  User,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -81,6 +84,7 @@ import {
   SiInstagram,
   SiYoutube,
   SiGoogle,
+  SiExcalidraw,
 } from "react-icons/si";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -425,39 +429,7 @@ export default function LandingPage() {
 
             <div className="relative">
               <div className="mt-16  opacity-80">
-                <div className="grid grid-cols-3 gap-4 w-full mt-10">
-                  <Card
-                    onClick={() => {
-                      setLeadGeneration(!LeadGeneration);
-                      setPersonalizedEmails(false);
-                      setStandardEmails(false);
-                      setEmailResponder(false);
-                      setEigeneAnfrage(false);
-                      setMitArbeiterVerteilung(false);
-                      setMarketingAutomation(false);
-                      setMobileAgent(false);
-                    }}
-                    className={`p-8 bg-slate-800/50 border-none w-full hover:bg-slate-700 ${
-                      LeadGeneration ? "bg-slate-700" : ""
-                    } transition-colors ease-in-out duration-300`}
-                  >
-                    <CardContent>
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                          <Mail className="h-6 w-6 text-blue-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2 text-left">
-                            Lead Generation
-                          </h3>
-                          <p className="text-sm text-left">
-                            Automatisiere Leads und gewinne Vertrauen mit
-                            personalisierten Emails
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                <div className="grid grid-cols-2 gap-4 w-full mt-10">
                   <Card
                     onClick={() => {
                       setEmailResponder(!EmailResponder);
@@ -490,37 +462,7 @@ export default function LandingPage() {
                       </div>
                     </CardContent>
                   </Card>
-                  <Card
-                    onClick={() => {
-                      setMitArbeiterVerteilung(!MitArbeiterVerteilung);
-                      setLeadGeneration(false);
-                      setEigeneAnfrage(false);
-                      setEmailResponder(false);
-                      setMarketingAutomation(false);
-                      setMobileAgent(false);
-                    }}
-                    className={`p-8 bg-slate-800/50 border-none ${
-                      MitArbeiterVerteilung ? "bg-slate-700" : ""
-                    } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
-                  >
-                    <CardContent>
-                      <div className="space-y-4">
-                        <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
-                          <UserCheck className="h-6 w-6 text-orange-400" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white mb-2 text-left">
-                            Mitarbeiter verteilung
-                          </h3>
-                          <p className="text-sm text-left">
-                            Verteile deine Aufgaben effizient und schnell auf
-                            all deine Mitarbeiter, ohne den Überblick zu
-                            verlieren
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+
                   <Card
                     onClick={() => {
                       setEigeneAnfrage(!EigeneAnfrage);
@@ -551,37 +493,96 @@ export default function LandingPage() {
                       </div>
                     </CardContent>
                   </Card>
-
                   <Card
                     onClick={() => {
-                      setMarketingAutomation(!MarketingAutomation);
+                      setMobileAgent(!MobileAgent);
+                      setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
                       setMitArbeiterVerteilung(false);
-                      setMobileAgent(false);
-                      setEigeneAnfrage(false);
+                      setMarketingAutomation(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
-                      MarketingAutomation ? "bg-slate-700" : ""
+                      MobileAgent ? "bg-slate-700" : ""
                     } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
                   >
                     <CardContent>
                       <div className="space-y-4">
-                        <div className="h-12 w-12 bg-yellow-500/10 rounded-lg flex items-center justify-center">
-                          <Instagram className="h-6 w-6 text-yellow-400" />
+                        <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                          <SiGmail className="h-6 w-6 text-blue-400" />
                         </div>
                         <div>
                           <h3 className="font-semibold text-white mb-2 text-left">
-                            Instagram, Twitter, Facebook Automatisierung
+                            Kaltaquise Email Schreiber
                           </h3>
                           <p className="text-sm text-left">
-                            Wir automatisieren dir den Video Upload auf mehreren
-                            Plattformen
+                            Reaktivierte alte Leads, mit personalisierter Email
                           </p>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
+
+                  <Card
+                    onClick={() => {
+                      setMobileAgent(!MobileAgent);
+                      setEigeneAnfrage(false);
+                      setLeadGeneration(false);
+                      setEmailResponder(false);
+                      setMitArbeiterVerteilung(false);
+                      setMarketingAutomation(false);
+                    }}
+                    className={`p-8 bg-slate-800/50 border-none ${
+                      MobileAgent ? "bg-slate-700" : ""
+                    } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
+                  >
+                    <CardContent>
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-yellow-500/10 rounded-lg flex items-center justify-center">
+                          <Table className="h-6 w-6 text-yellow-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2 text-left">
+                            Excel Generator
+                          </h3>
+                          <p className="text-sm text-left">
+                            Generiert und verbessert Excel Tabellen
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card
+                    onClick={() => {
+                      setMobileAgent(!MobileAgent);
+                      setEigeneAnfrage(false);
+                      setLeadGeneration(false);
+                      setEmailResponder(false);
+                      setMitArbeiterVerteilung(false);
+                      setMarketingAutomation(false);
+                    }}
+                    className={`p-8 bg-slate-800/50 border-none ${
+                      MobileAgent ? "bg-slate-700" : ""
+                    } w-full hover:bg-slate-700 transition-colors ease-in-out duration-300`}
+                  >
+                    <CardContent>
+                      <div className="space-y-4">
+                        <div className="h-12 w-12 bg-pink-500/10 rounded-lg flex items-center justify-center">
+                          <User className="h-6 w-6 text-pink-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white mb-2 text-left">
+                            Klone dein Arbeitskraft
+                          </h3>
+                          <p className="text-sm text-left">
+                            ChatBots die dich personalisiert repäsentieren
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
                   <Card
                     onClick={() => {
                       setMobileAgent(!MobileAgent);
