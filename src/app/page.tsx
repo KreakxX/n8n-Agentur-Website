@@ -435,6 +435,9 @@ export default function LandingPage() {
                       setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
                       setMobileAgent(false);
+                      setCloneChatBot(false);
+                      setChatBot(false);
+                      setExcelGenerator(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none w-full ${
                       EmailResponder ? "bg-slate-700" : ""
@@ -466,6 +469,9 @@ export default function LandingPage() {
                       setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
                       setMobileAgent(false);
+                      setCloneChatBot(false);
+                      setChatBot(false);
+                      setExcelGenerator(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
                       EigeneAnfrage ? "bg-slate-700" : ""
@@ -496,6 +502,9 @@ export default function LandingPage() {
                       setEmailResponder(false);
                       setKaltAquiseEmailWriter(!kaltAquiseEmailWriter);
                       setMarketingAutomation(false);
+                      setCloneChatBot(false);
+                      setChatBot(false);
+                      setExcelGenerator(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
                       kaltAquiseEmailWriter ? "bg-slate-700" : ""
@@ -526,6 +535,9 @@ export default function LandingPage() {
                       setEmailResponder(false);
                       setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
+                      setCloneChatBot(false);
+                      setMobileAgent(false);
+                      setChatBot(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
                       excelGenerator ? "bg-slate-700" : ""
@@ -556,6 +568,9 @@ export default function LandingPage() {
                       setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
                       setCloneChatBot(!cloneChatBot);
+                      setMobileAgent(false);
+                      setChatBot(false);
+                      setExcelGenerator(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
                       cloneChatBot ? "bg-slate-700" : ""
@@ -581,12 +596,14 @@ export default function LandingPage() {
                   <Card
                     onClick={() => {
                       setChatBot(!chatBot);
-
                       setEigeneAnfrage(false);
                       setLeadGeneration(false);
                       setEmailResponder(false);
                       setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
+                      setCloneChatBot(false);
+                      setMobileAgent(false);
+                      setExcelGenerator(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
                       chatBot ? "bg-slate-700" : ""
@@ -617,6 +634,9 @@ export default function LandingPage() {
                       setEmailResponder(false);
                       setKaltAquiseEmailWriter(false);
                       setMarketingAutomation(false);
+                      setCloneChatBot(false);
+                      setChatBot(false);
+                      setExcelGenerator(false);
                     }}
                     className={`p-8 bg-slate-800/50 border-none ${
                       MobileAgent ? "bg-slate-700" : ""
