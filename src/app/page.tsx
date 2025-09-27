@@ -95,7 +95,6 @@ import { Textarea } from "@/components/ui/textarea";
 
 export default function LandingPage() {
   const iconsMap = {
-    // Deine bestehenden
     SiN8N,
     SiWhatsapp,
     SiGmail,
@@ -170,13 +169,18 @@ export default function LandingPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <nav className="border-b border-slate-800 bg-slate-transparent backdrop-blur supports-[backdrop-filter]:bg-transparent">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-20 items-center justify-between">
             <div className="flex items-center space-x-8">
               <div className="flex items-center space-x-2">
                 <div className="h-10 w-10 rounded bg-orange-500 flex items-center justify-center">
                   <Workflow></Workflow>
                 </div>
-                <span className="text-xl font-bold">Young Digitalist</span>
+                <div className="flex flex-col ml-3">
+                  <span className="text-xl font-bold">Young Digitalist</span>
+                  <span className="text-slate-300 text-sm hover:text-white transition-colors">
+                    youngdigitalist@gmail.com
+                  </span>
+                </div>
               </div>
               <div className="hidden md:flex space-x-6">
                 <a
@@ -616,7 +620,7 @@ export default function LandingPage() {
                         </div>
                         <div>
                           <h3 className="font-semibold text-white mb-2 text-left">
-                            Personal Assisten für Teams
+                            Personal Assistenten für Teams
                           </h3>
                           <p className="text-sm text-left">
                             virtuelle Sekretärin für alle deine Mitarbeiter
@@ -942,11 +946,9 @@ export default function LandingPage() {
                     <Building2 className="h-5 w-5 text-slate-700" />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-white font-medium text-sm">
-                      Enterprise
-                    </h3>
+                    <h3 className="text-white font-medium text-sm">Leads</h3>
                     <p className="text-slate-400 text-xs">
-                      Employee Automation
+                      Kaltaquise Lead writer
                     </p>
                   </div>
                 </TabsTrigger>
@@ -1395,7 +1397,6 @@ export default function LandingPage() {
             </Card>
           </div>
 
-          {/* CTA Section */}
           <div className="text-center mt-20">
             <div className="max-w-2xl mx-auto">
               <h3 className="text-3xl font-bold text-white mb-6">
@@ -1417,101 +1418,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-800 py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <div className="h-8 w-8 rounded bg-orange-500 flex items-center justify-center">
-                  <Workflow className="h-5 w-5 text-white" />
-                </div>
-                <span className="text-xl font-bold">Young Digitalist</span>
-              </div>
-              <p className="text-sm text-slate-400">
-                The workflow automation platform for technical teams
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Integrations
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Templates
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Pricing
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Community
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Support
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Privacy
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-400">
-            <p>&copy; 2024 FlowBroz. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
       <style jsx>{`
         @keyframes scroll {
           0% {
