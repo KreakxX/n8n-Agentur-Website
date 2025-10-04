@@ -960,11 +960,11 @@ export default function LandingPage() {
                          hover:bg-slate-750 transition-colors"
                 >
                   <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center">
-                    <ChartNoAxesCombined className="h-5 w-5 text-slate-700" />
+                    <Mail className="h-5 w-5 text-slate-700" />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-white font-medium text-sm">Services</h3>
-                    <p className="text-slate-400 text-xs">Lead Automation</p>
+                    <h3 className="text-white font-medium text-sm">Email</h3>
+                    <p className="text-slate-400 text-xs">Autoresponder</p>
                   </div>
                 </TabsTrigger>
 
@@ -1002,7 +1002,7 @@ export default function LandingPage() {
               <TabsContent value="IT" className="mt-0">
                 <div className="bg-slate-800 rounded-xl p-1">
                   <img
-                    src="/MitarbeiterWorkflowNew.png"
+                    src="/LeadReactivator.png"
                     alt="Employee automation workflow"
                     className="w-full h-[500px] object-cover rounded-lg"
                   />
