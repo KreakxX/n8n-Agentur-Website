@@ -1002,9 +1002,9 @@ export default function LandingPage() {
               <TabsContent value="IT" className="mt-0">
                 <div className="bg-slate-800 rounded-xl p-1">
                   <img
-                    src="/LeadReactivator.png"
+                    src="/LeadReactivatorReworked.png"
                     alt="Employee automation workflow"
-                    className="w-full h-[500px] object-cover rounded-lg"
+                    className="w-full h-[680px] object-cover rounded-lg"
                   />
                 </div>
               </TabsContent>
