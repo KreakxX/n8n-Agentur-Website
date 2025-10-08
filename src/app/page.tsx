@@ -1014,7 +1014,7 @@ export default function LandingPage() {
                   <img
                     src="/EmailAutoresponder.png"
                     alt="Lead automation workflow"
-                    className="w-full h-[705px] object-cover rounded-lg"
+                    className="w-full h-[705px] object-cover rounded-lg [clip-path:inset(0_1px_0_0)]"
                   />
                 </div>
               </TabsContent>
